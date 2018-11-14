@@ -3,11 +3,6 @@
 <root>
  <format version="1" subversion="2"/>
  <content>
-  <node crypt="" id="1300000000aaaaaaaaa1" name="Rename me">
-   <recordtable>
-    <record id="1300000000aaaaaaaaa3" name="Welcome to MyTetra!" author="" url="" tags="MyTetra, Qt" ctime="20081210124656" dir="1300000000aaaaaaaaa2" file="text.html"/>
-   </recordtable>
-  </node>
   <node crypt="0" icon="" id="1542219045xznge0wft0" name="Техническая документация">
    <node crypt="0" icon="" id="1542219088pkqprcwme6" name="ПК"/>
    <node crypt="0" icon="" id="1542219107whkk93rgnu" name="Android"/>
