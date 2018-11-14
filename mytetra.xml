@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mytetradoc>
 <root>
- <format version="1" subversion="1" />
+ <format version="1" subversion="2"/>
  <content>
-  <node id="1300000000aaaaaaaaa1" name="Rename me" >
+  <node crypt="" id="1300000000aaaaaaaaa1" name="Rename me">
    <recordtable>
-    <record dir="1300000000aaaaaaaaa2" url="" tags="MyTetra, Qt" author="" ctime="20081210124656" id="1300000000aaaaaaaaa3" name="Welcome to MyTetra!" file="text.html" />
+    <record id="1300000000aaaaaaaaa3" name="Welcome to MyTetra!" author="" url="" tags="MyTetra, Qt" ctime="20081210124656" dir="1300000000aaaaaaaaa2" file="text.html"/>
    </recordtable>
+  </node>
+  <node crypt="1" icon="" id="1542219045xznge0wft0" name="UkM1U0lNUAM50oyZTnDNmIwPaM6Cp/BRi7TN+MnVDidbMVMrcscNWgmJxmHFxj2JTZNX8pWsz84nA3EE7gIoMLRIsJSFTN9PJZ9Vt3lrgYY0qGRQc6r5cQ==">
+   <node crypt="1" icon="" id="1542219088pkqprcwme6" name="UkM1U0lNUAPSUDUbHHfjJ91juP7+pzn2Uahj8yZz4lkKShBCuUvX/Z0kJJWbEQcQ"/>
+   <node crypt="1" icon="" id="1542219107whkk93rgnu" name="UkM1U0lNUAPHrYHbNEhRWIaD/wPIS2htWs0SuJnl/Zt0nM6AsjvcfzB0JVbDnvCx"/>
+   <node crypt="1" icon="" id="1542219138spg8cgcbz6" name="UkM1U0lNUAMBS6AhAO3VKbmDwvPeJwdtIsYuG6pFjR5j1jxuuD52hMSQSRBiBmGCcMBwsGNpm2Q="/>
   </node>
  </content>
 </root>
