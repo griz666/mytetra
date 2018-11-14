@@ -16,6 +16,10 @@
      <record id="15422193147bp4leuri0" name="Прохождение лабиринта" author="" url="http://nxt33.blogspot.com/2013/04/blog-post_5912.html" tags="Lego, роботы" ctime="20181114211514" dir="15422193149c4p8qkjk6" file="text.html"/>
     </recordtable>
    </node>
+   <node crypt="" id="1542220017agbxk14c3z" name="Сети">
+    <node crypt="" id="1542220025d6vjz0jfu6" name="Mikrotik"/>
+    <node crypt="" id="1542220049cbnnakcpkh" name="Unifi"/>
+   </node>
   </node>
  </content>
 </root>
