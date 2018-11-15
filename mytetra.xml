@@ -14,16 +14,17 @@
     <node crypt="" id="1542220025d6vjz0jfu6" name="Mikrotik">
      <recordtable>
       <record id="1542220328vzo2s5flp7" name="Микротик в роли тестера" author="" url="https://habr.com/post/364593/" tags="mikrotik, тестер, diy" ctime="20181114213208" dir="15422203283686qe6ltm" file="text.html"/>
+      <record id="1542267802m4stskmgf6" name="Подробный разбор настройки CapsMan" author="" url="https://www.technotrade.com.ua/Articles/MikroTik_CAPsMAN_setup_2016-08-05.php" tags="mikrotik, capsman, настройка, wifi" ctime="20181115104322" dir="1542267802410egppoe0" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1542220049cbnnakcpkh" name="Unifi"/>
    </node>
-  </node>
-  <node crypt="" id="1542267630vqno9owttk" name="Linux">
-   <node crypt="" id="1542267630ady7r9x9jn" name="Проблемы и решения">
-    <recordtable>
-     <record id="1542260914i2a99jhj4h" name="Не загружается из за случайных чисел" author="" url="http://liberatum.ru/e/dev-random-urandom-haveged" tags="Linux, энтропия, загрузка, проблема" ctime="20181115104030" dir="154226091447jbo6tzw3" file="text.html"/>
-    </recordtable>
+   <node crypt="" id="1542267664su4ugevaim" name="Linux">
+    <node crypt="" id="1542267664jstogs8u9d" name="Проблемы и решения">
+     <recordtable>
+      <record id="1542260914i2a99jhj4h" name="Не загружается из за случайных чисел" author="" url="http://liberatum.ru/e/dev-random-urandom-haveged" tags="Linux, энтропия, загрузка, проблема" ctime="20181115104104" dir="154226091447jbo6tzw3" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
   </node>
  </content>
