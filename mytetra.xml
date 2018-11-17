@@ -28,6 +28,7 @@
     <node crypt="" id="15424864394lsj8rldmy" name="Пакеты">
      <recordtable>
       <record id="15424862763z5osmxeqh" name="Памятка по управлению пакетами с помощью aptitude" author="" url="https://admins.su/pamyatka-po-upravleniyu-paketami-s-pomoshhyu-aptitude-v-debian-ubuntu-etc/" tags="debian, aptitude, пакеты" ctime="20181117232722" dir="1542486276aim264t93d" file="text.html"/>
+      <record id="1542486570s9cgksxg25" name="установка определенной версии пакета" author="" url="http://nslookup.org.ua/blog/2014/05/29/%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82/" tags="debian, aptitude, версия, пакеты" ctime="20181117232930" dir="15424865700olho96o3a" file="text.html"/>
      </recordtable>
     </node>
    </node>
