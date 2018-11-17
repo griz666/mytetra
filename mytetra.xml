@@ -22,6 +22,9 @@
     <node crypt="" id="1542220025d6vjz0jfu6" name="Mikrotik">
      <recordtable>
       <record id="1542220328vzo2s5flp7" name="Микротик в роли тестера" author="" url="https://habr.com/post/364593/" tags="mikrotik, тестер, diy" ctime="20181114213208" dir="15422203283686qe6ltm" file="text.html"/>
+      <record id="1542460032hzkwq9t51x" name="Бесшовный wifi роуминг с помощью capsman v2 в Микротик" author="" url="https://serveradmin.ru/nastroyka-capsman-v-mikrotik/" tags="mikrotik, wifi, capsman" ctime="20181117160712" dir="1542460032w9dzdhx7ts" file="text.html"/>
+      <record id="1542460383vxjca89997" name="Настройка MikroTik CAPsMAN v2 на hAP ac (2.4 ГГц и 5 ГГц) " author="" url="https://2keep.net/mikrotik-capsman-v2-hap-ac-lite/#___CAP" tags="mikrotik, wifi, capsman" ctime="20181117161303" dir="1542460383qg0s20t6dk" file="text.html"/>
+      <record id="1542460611r4sgl4cqon" name="Настройка MikroTik CAPsMAN v2 роуминг сертификаты " author="" url="http://www.univers-spb.ru/about/news/index.php?news=391#Seamless_roaming_on_CAPSMAN" tags="mikrotik, wifi, capsman" ctime="20181117161651" dir="1542460611fuj1gfpq06" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1542220049cbnnakcpkh" name="Unifi"/>

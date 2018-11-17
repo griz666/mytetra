@@ -1,0 +1,812 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head><meta name="qrichtext" content="1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'DejaVu Sans'; font-size:11pt; font-weight:400; font-style:normal;">
+<p style=" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="pagetitle"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Н</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">астройка MikroTik CAPsMAN v2 роуминг сертификаты</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">09.03.2018 </span></p>
+<p style=" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Настройка MikroTik CAPsMAN v2 роуминг сертификаты</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Содержание:</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#CAPsMAN_function"><span style=" text-decoration: underline; color:#0000ff;">CAPsMAN v2 функции</span></a> </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#system_requirements"><span style=" text-decoration: underline; color:#0000ff;">Системные требования</span></a> </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#CAP_to_CAPsMAN_operating_principle"><span style=" text-decoration: underline; color:#0000ff;">CAP to CAPsMAN принцип работы</span></a> </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#Configuring_CAPsMAN"><span style=" text-decoration: underline; color:#0000ff;">Настраиваем CAPsMAN контроллер</span></a> </li>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 2;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#Configuration_before_Provisioning"><span style=" text-decoration: underline; color:#0000ff;">Конфигурация перед Provisioning</span></a> </li>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 3;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#Channel_Settings"><span style=" text-decoration: underline; color:#0000ff;">Настройка Channel</span></a> </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#Configuring_Datapath"><span style=" text-decoration: underline; color:#0000ff;">Настройка Datapath</span></a> </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#Configure_Security"><span style=" text-decoration: underline; color:#0000ff;">Настройка Security</span></a> </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#Configuring_Master_Configuration_Profiles"><span style=" text-decoration: underline; color:#0000ff;">Настройка Master Configuration Profiles</span></a> </li></ul>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#Configuring_Provisioning"><span style=" text-decoration: underline; color:#0000ff;">Настраиваем Provisioning</span></a> </li></ul>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#Seamless_roaming_on_CAPSMAN"><span style=" text-decoration: underline; color:#0000ff;">Бесшовный роуминг на CAPSMAN есть ли он или имитация с помощью Access List</span></a> </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#Access_Point_Settings_-_CAP"><span style=" text-decoration: underline; color:#0000ff;">Настройки точки доступа - CAP</span></a> </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#Results_of_application_settings_in_CAPsMAN"><span style=" text-decoration: underline; color:#0000ff;">Результаты применения настроек в CAPsMAN (CAP = CAPsMAN)</span></a> </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#CAPsMAN_configuration_with_certificates"><span style=" text-decoration: underline; color:#0000ff;">Конфигурация CAPsMAN с сертификатами</span></a> </li></ul>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 2;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#CAPsMAN_with_certificates"><span style=" text-decoration: underline; color:#0000ff;">CAPsMAN</span></a> </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#CAP_with_certificates"><span style=" text-decoration: underline; color:#0000ff;">CAP</span></a> </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="http://www.univers-spb.ru/about/news/index.php?news=391#CAPsMAN_state_of_the_connected_CAPs"><span style=" text-decoration: underline; color:#0000ff;">CAPsMAN состояние подключенных CAPs с сертификатами</span></a> </li></ul>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="CAPsMAN_function"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">C</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">APsMAN v2 функции:</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">CAPsMAN automatic upgrade of all CAP clients (configurable) </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">improved CAP&lt;-&gt;CAPsMAN data connection protocol </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">added &quot;Name Format&quot; and &quot;Name Prefix&quot; setting for Provision rules </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">improved logging entries when client roams between the CAPs </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">added L2 Path MTU discovery </li></ul>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Параметры обновления с v1 по v2: </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Вариант 1: установите новый временный маршрутизатор CAPsMAN v2 в той же сети, где текущий маршрутизатор CAPsMAN включен и включите / обновите пакет wireless-cm2 на CAP. Все CAP с v2 подключаются к новому временному маршрутизатору CAPsMAN v2. После обновления каждого CAP до версии v2 обновите текущий CAPsMAN до версии v2, а затем отключите временный маршрутизатор CAPsMAN v2. </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Вариант 2: одновременно обновите свои CAP, а затем CAPsMAN до v2. В этом случае у вас может быть немного больше времени простоя, если вы не планируете одновременно перезагружать / устанавливать все CAP.</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="system_requirements"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">С</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">истемные требования</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">CAPsMAN работает на любой RouterOS начиная с 6.11, наличие беспроводного интерфейса (wlan1) не обязательно </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">CAPsMAN v2 поддерживается начиная с RouterOS 6.22rc7. </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">CAP (точка доступа) должна иметь лицензию Level4 RouterOS </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">unlimited CAPs (access points) supported by CAPsMAN </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">32 ssid для CAP </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">32 Virtual interfaces на master radio interface</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="CAP_to_CAPsMAN_operating_principle"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">C</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">AP to CAPsMAN принцип работы</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Для того чтобы система CAPsMAN функционировала и обеспечивала беспроводную связь, CAP должен установить соединение управления с CAPsMAN. Соединение управления может быть установлено с использованием протоколов MAC или IP layer и защищено с помощью «DTLS». </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">CAP также может передавать клиентское соединение данных с Менеджером, но соединение с данными не защищено. Если это считается необходимым, тогда необходимо использовать другие средства защиты данных, например. IPSec или зашифрованные туннели. </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Соединение CAP to CAPsMAN может быть установлено с использованием 2 транспортных протоколов (через Layer 2 и Layer 3).</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">MAC layer особенности соединения:</li>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 2;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">no IP configuration necessary on CAP </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">CAP and CAPsMAN must be on the same Layer 2 segment - either physical or virtual (by means of L2 tunnels) </li></ul>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">IP layer (UDP) особенности соединения:</li></ul>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 2;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">can traverse NAT if necessary </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">CAP must be able to reach CAPsMAN using IP protocol </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">if the CAP is not on the same L2 segment as CAPsMAN, it must be provisioned with the CAPsMAN IP address, because IP multicast based discovery does not work over Layer3 </li></ul>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Чтобы установить соединение с CAPsMAN, CAP выполняет процесс обнаружения. Во время обнаружения CAP пытается связаться с CAPsMAN и создает список доступных CAPsMAN. CAP пытается связаться с доступным CAPsMAN, используя:</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">configured list of Manager IP addresses </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">list of CAPsMAN IP addresses obtained from DHCP server </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">broadcasting on configured interfaces using both - IP and MAC layer protocols.</li></ul>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Когда список доступных CAPsMANs построен, CAP выбирает CAPsMAN на основе следующих правил:</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">if <span style=" font-weight:600;">caps-man-names</span> parameter specifies allowed manager names (<span style=" font-weight:600;">/system identity</span> of CAPsMAN), CAP will prefer the CAPsMAN that is earlier in the list, if list is empty it will connect to any available Manager </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">suitable Manager with MAC layer connectivity is preferred to Manager with IP connectivity </li></ul>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">После выбора «Менеджер» CAP пытается установить соединение DTLS. Возможны следующие способы аутентификации:</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">no certificates on CAP and CAPsMAN - no authentication </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">only Manager is configured with certificate - CAP checks CAPsMAN certificate, but does not fail if it does not have appropriate trusted CA certificate, CAPsMAN must be configured with <span style=" font-weight:600;">require-peer-certificate=no</span> in order to establish connection with CAP that does not possess certificate </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">CAP and CAPsMAN are configured with certificates - mutual authentication</li></ul>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">После установления соединения DTLS CAP может дополнительно проверить поле CommonName сертификата, предоставленного CAPsMAN. Параметр cap-man-certificate-common-names содержит список допустимых значений CommonName. Если этот список не пуст, CAPsMAN должен быть настроен с сертификатом. Если этот список пуст, CAP не проверяет поле CommonName.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Если CAPsMAN или CAP отключится от сети, потеря соединения между CAP и CAPsMAN будет обнаружена примерно через 10-20 секунд.</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="Configuring_CAPsMAN"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Н</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">астраиваем CAPsMAN</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;"># посмотрим его текущее состояние</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579m6jzo8wmkq.png" /></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man manager print</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;"># по умолчанию мы видим следующие настройки</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">enabled: no<br />certificate: none<br />ca-certificate: none<br />package-path: <br />upgrade-policy: none<br />require-peer-certificate: no</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">enabled</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">yes | no</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">no</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">включаем или выключаем CAPsMAN</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">certificate</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">auto | certificate name | none</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">none</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Device certificate</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">ca-certificate</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">auto | certificate name | none</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">none</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Device CA certificate</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">require-peer-certificate</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">yes | no</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">no</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">все подключенным CAPs необходимо иметь актуальный сертификат</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">package-path</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">string |</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">устанавливает путь к папке где RouterOS packages. For example, use &quot;/nova&quot; to specify the Nova folder from the Files section. If nothing specified the CAPsMAN can provide the its built-in architecture RouterOS packages to CAP with the same architecture for upgrade.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">upgrade-policy</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">none | require-same-version | suggest-same-upgrade</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">none</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Опции политики обновлений (очень удобная функция обновляет RouterOS на всех точках в сети, но не обновит firmware) </span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">none - do not perform upgrade </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">require-same-version - CAPsMAN обновляет CAP до той же версии (было у CAP = 5 а у CAPsMAN = 6 - у CAP в результате станет 6) если не обновит то авто provision будет работать. (Manual provision is still possible) </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">suggest-same-version - CAPsMAN обновляет CAP до той же версии (было у CAP = 5 а у CAPsMAN = 6 - у CAP в результате станет 6) если не обновит то авто provision <span style=" font-weight:600;">НЕ будет работать</span> </li></ul></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;"># включаем службу</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579hvdxe24vw0.png" /></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man manager set enabled=yes</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="Configuration_before_Provisioning"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">К</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">онфигурация перед Provisioning</span></p>
+<p style=" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="Channel_Settings"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Н</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">астройка Channel</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579yr4xhlqbd2.png" /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Ширина полосы</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Номера каналов</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Новые каналы</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">20 MHz</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">36, 40, 44, 48, 52, 56, 60, 64, 100, 104, 108, 112, 116,<br />120, 124, 128, 132, 136, 140, 144, 149, 153, 161, 165, 169</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">68, 72, 76, 80, 84, 88, 92, 96, 169, 173, 177, 181</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">40 MHz</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">38, 46, 54, 62, 102, 110, 118, 126, 134, 142, 151, 159</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">70, 78, 86, 94, 167, 175</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">80 MHz</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">42, 58, 106, 122, 138, 155</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">74, 90, 171</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">160 MHz</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">50, 114</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">82, 163</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Возможные скорости передачи данных при максимальной модуляции для устройств актуального стандарта 802.11ac Wave 2, учитываем что многие устройства поддерживают модуляцию 1024-QAM при 80 MHz, что выше спецификации 802.11 ac</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Пространственных<br />потоков</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">20 MHz<br />256-QAM<br />(1 ch)</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">40 MHz<br />256-QAM<br /> 5/6<br />(2 ch)</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">80 MHz<br />256-QAM<br />(4 ch)</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">80 MHz<br />1024-QAM<br />(4 ch)</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">160 MHz<br />256-QAM<br />(8 ch)</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">160 MHz<br />1024-QAM<br />(8 ch)</span></p></td></tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">1</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">200</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">433.3</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">541</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">867</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">1084</span></p></td></tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">2</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">400</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">866.7</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">1084</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">1733.3</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">2166</span></p></td></tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">3</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">289</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">600</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">1300</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">1625</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p></td></tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">4</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">800</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">1733.3</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">2166</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">3466.7</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">4334</span></p></td></tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">8</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">693</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">1600</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">3466.7</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">4334</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">6933.3</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">8668</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">866.6Mbps-80MHz/2S/SGI</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> - максимум, что доступно в текущий момент на устройствах MikroTik CAP ac и WAP ac, </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">975Mbps-80MHz/2S/SGI</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> - максимум для MikroTik hAP ac не будем рассматривать в силу его технологического возраста (слабый процессор QCA9558 720МГц 2013 года, QCA9880 MIMO 3x3)</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">в этом разделе мы выбираем значение: стандарта, ширины канала, название, расположение дополнительного канала, мощность на выходе с передатчика</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Вариант с предустановленным extension-channel</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man channel add band=2ghz-g/n control-channel-width=20mhz name=&quot;2.4G&quot; extension-channel=Ce tx-power=16</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man channel add band=5ghz-n/ac control-channel-width=20mhz name=&quot;5G&quot; extension-channel=Ceee tx-power=16</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Вариант из актуальной RouterOS где extension-channel выберет сам CAPsMAN</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579m0o5fcebey.png" /><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man channel add name=&quot;2.4G&quot; control-channel-width=20mhz band=2ghz-g/n extension-channel=XX tx-power=16</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man channel add name=&quot;5G&quot; control-channel-width=20mhz band=5ghz-n/ac extension-channel=XXXX tx-power=20</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;"># в данном примере значения задаются следующим образом: для hap ac lite - берем значение максимальной модуляции из тех характеристик для 2.4 GHz - MCS7 = 16dBm и 5 GHz - MCS9 = 16dBm и задаем значение как tx-power - мощность на выходе с передатчика, ниже на изображении схематически покаазано как влияет на текущую модуляцию уровень сигнала на клиентском устройстве </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">channel.band</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">2ghz-b | 2ghz-b/g | 2ghz-b/g/n | 2ghz-g/n | 2ghz-onlyg | 2ghz-onlyn | 5ghz-a | 5ghz-a/n | 5ghz-a/n/ac | 5ghz-n/ac | 5ghz-onlyac (с 6.42.39) | 5ghz-onlyn</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: ) </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">channel.extension-channel</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">Ce | Ceee | eC | eCee | eeCe | eeeC | disabled</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: ) XX и XXXX доступны с RouterOS 6.39 </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">channel.tx-power</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">integer [-30..40]</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: ) - рекомендуем исходя из технических характеристик точки доступа </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579hc9u9ndei9.png" /></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="Configuring_Datapath"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Н</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">астройка Datapath</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579ug1zuy0kpd.png" /><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man datapath add name=&quot;datapath1&quot; client-to-client-forwarding=no local-forwarding=yes</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">bridge -- bridge interface to add interface to, as a bridge port, when enabled </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">bridge-cost -- bridge port cost to use when adding as bridge port </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">bridge-horizon -- bridge horizon to use when adding as bridge port </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">client-to-client-forwarding -- позволяет клиентам видеть друг друга в wlan, в режиме &quot;local forwarding&quot; mode эта функция реализована CAP, в противном случае реализована CAPsMAN. </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">local-forwarding -- controls forwarding mode</li></ul>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">local forwarding режим где CAP передает данные в рамках беспроводного интерфейса </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">manager forwarding режим где CAP передает все данные в CAPsMAN и получает все данные через CAPsMAN на беспроводной интерфейс wlan.</li></ul>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">openflow-switch -- OpenFlow switch to add interface to, as port when enabled </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">vlan-id -- VLAN ID to assign to interface if vlan-mode enables use of VLAN tagging </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">vlan-mode -- VLAN tagging mode specifies if VLAN tag should be assigned to interface (causes all received data to get tagged with VLAN tag and allows interface to only send out data tagged with given tag)</li></ul>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="Configure_Security"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Н</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">астройка Security</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image15424605792ctqhoib0x.png" /><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man security add name=&quot;security1&quot; authentication-types=wpa2-psk encryption=aes-ccm group-encryption=aes-ccm group-key-update=1h passphrase=&quot;12345678&quot;</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="Configuring_Master_Configuration_Profiles"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Н</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">астройка Master Configuration Profiles</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579qx9z8inlcl.png" /><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man configuration add name=&quot;cfg_5G&quot; mode=ap ssid=&quot;unisi.ru&quot; tx-chains=0,1,2 rx-chains=0,1,2 distance=indoors security=security1 datapath=datapath1 channel=5G</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man configuration add name=&quot;cfg_2.4G&quot; mode=ap ssid=&quot;unisi.ru&quot; tx-chains=0,1,2 rx-chains=0,1,2 guard-interval=any distance=indoors hw-retries=7 hw-protection-mode=rts-cts security=security1 datapath=datapath1 channel=2.4G</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">channel</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">list</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">User defined list taken from Channel names (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">/caps-man channels</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">channel.band</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">2ghz-b | 2ghz-b/g | 2ghz-b/g/n | 2ghz-g/n | 2ghz-onlyg | 2ghz-onlyn | 5ghz-a | 5ghz-a/n | 5ghz-a/n/ac | 5ghz-n/ac | 5ghz-onlyac (с 6.42.39) | 5ghz-onlyn</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Определить рабочий диапазон радиочастот и режим, взятый из аппаратной возможности беспроводной карты</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">channel.extension-channel</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">Ce | Ceee | eC | eCee | eeCe | eeeC | XX (с 6.39) | XXXX (с 6.39) | disabled</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Конфигурация канала расширения. (Например, Ce = канал расширения выше канала управления, eC = канал расширения ниже канала управления)</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">channel.frequency</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">integer [0..4294967295]</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Значение частоты канала в МГц, на котором будет работать AP. Если он оставлен пустым, CAPsMAN автоматически определит лучшую частоту, которая наименее занята.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">channel.tx-power</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">integer [-30..40]</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Set TX Power for Card (in Dbm)</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">channel.width</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Sets Channel Width in MHz.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">comment</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">string</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Short description of the Configuration profile</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">country</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">name of the country | no_country_set</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">no_country_set</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ограничение доступных диапазонов, частот и максимальной мощности передачи для каждой частоты. Также указывает значение по умолчанию для </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">scan-list</span><span style=" font-family:'Sans Serif'; font-size:9pt;">. Значение </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">no_country_set</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> - это набор каналов, совместимых с FCC.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">datapath</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">list</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">User defined list taken from Datapath names (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">/caps-man datapath</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">datapath.bridge</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">list</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Bridge to which particular interface should be automatically added as port</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">datapath.bridge-cost</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">integer [0..4294967295]</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">bridge port cost to use when adding as bridge port</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">datapath.bridge-horizon</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">integer [0..4294967295]</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">bridge horizon to use when adding as bridge port</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">datapath.client-to-client-forwarding</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">yes | no</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">no</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">controls if client-to-client forwarding between wireless clients connected to interface should be allowed, in local forwarding mode this function is performed by CAP, otherwise it is performed by CAPsMAN</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">datapath.local-forwarding</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">yes | no</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">no</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">controls forwarding mode</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">datapath.openflow-switch</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">OpenFlow switch port (when enabled) to add interface to</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">datapath.vlan-id</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">integer [1..4095]</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">VLAN ID to assign to interface if vlan-mode enables use of VLAN tagging</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">datapath.vlan-mode</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">use-service-tag | use-tag</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Enables and specifies type of VLAN tag to be assigned to interface (causes all received data to get tagged with VLAN tag and allows interface to only send out data tagged with given tag)</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">guard-interval</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">any | long</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">any</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Разрешить ли использование короткого защитного интервала (обратитесь к спецификации 802.11n MCS, чтобы узнать, как это может повлиять на пропускную способность). &quot;any&quot; будет использовать либо короткий (&quot;short&quot;), либо длинный (&quot;long&quot;), в зависимости от скорости передачи данных, &quot;long&quot; будет использовать только длинные.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">hide-ssid</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">yes | no</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">.</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-style:italic;">yes</span>- AP does not include SSID in the beacon frames and does not reply to probe requests that have broadcast SSID. </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-style:italic;">no</span>- AP includes SSID in the beacon frames and replies to probe requests that have broadcast SSID. </li></ul>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Это свойство действует только в режиме AP. Установив его в </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">yes</span><span style=" font-family:'Sans Serif'; font-size:9pt;">, можно удалите эту сеть из списка беспроводных сетей, которые показаны некоторые клиентские программы. Изменение этого параметра не повышает безопасность беспроводной сети, поскольку SSID включен в другие фреймы, отправленные AP.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">load-balancing-group</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">string</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Интерфейс, принадлежащий группе баланса нагрузки, принимает новых клиентов только в том случае, если количество уже подключенных клиентов меньше, чем на остальных интерфейсах из одной группы.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">max-sta-count</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">integer [1..2007]</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Максимальное количество подключенных клиентов.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">mode</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ap</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Установите рабочий режим. На данный момент оддерживается только ap</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">multicast-helper</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">default | disabled | full</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">default</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">When set to full multicast packets will be sent with unicast destination MAC address, resolving &quot;multicast problem&quot; on wireless link. This option should be enabled only on access point, clients should be configured in</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">station-bridge </span><span style=" font-family:'Sans Serif'; font-size:9pt;">mode. Available starting from RouterOS 5.15.</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">disabled - disables the helper and sends multicast packets with multicast destination MAC addresses </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">full - all multicast packet mac address are changed to unicast mac addresses prior sending them out </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">default - default choice that currently is set to<span style=" font-style:italic;"> disabled</span>. Value can be changed in future releases. </li></ul></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">name</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">string</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Descriptive name for the Configuration Profile</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">rx-chains</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">list of integer [0..2]</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">0</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Какие антенны использовать для приема.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">security</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">string</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">none</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Name of security configuration from</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;"> /caps-man security</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">security.authentication-types</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">list of string</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">none</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Specify the type of Authentication from</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;"> wpa-psk</span><span style=" font-family:'Sans Serif'; font-size:9pt;">,</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;"> wpa2-psk</span><span style=" font-family:'Sans Serif'; font-size:9pt;">,</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;"> wpa-eap </span><span style=" font-family:'Sans Serif'; font-size:9pt;">or</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;"> wpa2-eap</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">security.eap-methods</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">eap-tls | passthrough</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">none</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">.</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">eap-tls - Use built-in EAP TLS authentication. </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">passthrough - Access point will relay authentication process to the RADIUS server. </li></ul></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">security.encryption</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">aes-ccm | tkip</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Set type of unicast encryption algorithm used</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">security.group-encryption</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">aes-ccm | tkip</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Set type of group encryption algorithm used</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">security.passphrase</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">string</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">WPA or WPA2 pre-shared key</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">SSID</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">string (0..32 chars)</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">SSID (service set identifier) is a name broadcast in the beacons that identifies wireless network.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">tx-chains</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">list of integer [0..2]</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">0</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Which antennas to use for transmit.</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;"># country</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> - в актуальных прошивках с RouterOS 6.40.3 данный параметр не актуален он имеет единственное доступное значение </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">&quot;russia3&quot;</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> ниже приведен частотный план </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/interface wireless info country-info</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">country: russia3<br />ranges: 2402-2482/b,g,gn20,gn40(20dBm)<br />2417-2457/g-turbo(20dBm)<br />5170-5250/a,an20,an40,ac20,ac40,ac80,ac160,ac80+80(20dBm)/passive<br />5250-5330/a,an20,an40,ac20,ac40,ac80,ac160,ac80+80(20dBm)/dfs,passive<br />5650-5710/a,an20,an40,ac20,ac40,ac80,ac160,ac80+80(20dBm)/dfs,passive<br />5755-5815/a,an20,an40,ac20,ac40,ac80,ac160,ac80+80(20dBm)<br />5190-5310/a-turbo(20dBm)/dfs<br />5180-5300/a-turbo(20dBm)/dfs</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><thead>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">CHANNEL<br />NUMBER</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">FREQUENCY<br />MHZ</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">EUROPE<br />(ETSI)</span></p></td></tr></thead>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">36</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5180</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Indoors</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">40</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5200</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Indoors</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">44</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5220</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Indoors</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">48</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5240</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Indoors</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">52</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5260</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Indoors / DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">56</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5280</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Indoors / DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">60</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5300</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Indoors / DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">64</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5320</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Indoors / DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">100</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5500</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">104</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5520</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">108</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5540</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">112</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5560</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">116</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5580</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">120</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5600</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">124</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5620</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">128</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5640</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">132</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5660</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">136</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5680</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">140</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5700</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">DFS / TPC</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">149</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5745</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">SRD</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">153</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5765</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">SRD</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">157</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5785</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">SRD</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">161</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5805</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">SRD</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">165</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">5825</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">SRD</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">DFS = Dynamic Frequency Selection; </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">TPC = Transmit Power Control; </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">SRD = Short Range Devices 25 mW max power. </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">не смотря на это добавленный в RouterOS 6.41 - !) wireless - new driver with initial support for 160 and 80+80 MHz channel width; - нам не доступен </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">и добавленный в RouterOS 6.42rc39 - *) winbox - added 160 MHz &quot;channel-width&quot; to wireless settings; - на данный момент тоже не доступен</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="Configuring_Provisioning"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Н</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">астраиваем Provisioning</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;"># настройка поиска CAP по MAC адресу для этого указываем какие режимы для каких мастер конфигураций и соответственно задаем префикс для удобной идентификации</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579u7ivmcamwz.png" /><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man provisioning add radio-mac=00:00:00:00:00:00 hw-supported-modes=an,ac identity-regexp=&quot;&quot; common-name-regexp=&quot;&quot; ip-address-ranges=&quot;&quot; action=create-dynamic-enabled master-configuration=cfg_5G slave-configurations=&quot;&quot; name-format=prefix-identity name-prefix=&quot;5G&quot;</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man provisioning add radio-mac=00:00:00:00:00:00 hw-supported-modes=g,gn identity-regexp=&quot;&quot; common-name-regexp=&quot;&quot; ip-address-ranges=&quot;&quot; action=create-dynamic-enabled master-configuration=cfg_2.4G slave-configurations=&quot;&quot; name-format=prefix-identity name-prefix=&quot;2.4G&quot;</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">action</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">create-disabled | create-enabled | create-dynamic-enabled | none</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">none</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Действие, которое следует предпринять, если совпадения правил задаются с помощью следующих параметров:</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">create-disabled</span>- create disabled static interfaces for radio. I.e., the interfaces will be bound to the radio, but the radio will not be operational until the interface is manually enabled; </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">create-enabled</span>- create enabled static interfaces. I.e., the interfaces will be bound to the radio and the radio will be operational; </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">create-dynamic-enabled</span>- create enabled dynamic interfaces. I.e., the interfaces will be bound to the radio, and the radio will be operational; </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">none</span>- do nothing, leaves radio in non-provisioned state; </li></ul></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">comment</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">string</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Краткое описание правила Provisioning</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">common-name-regexp</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">string</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Регулярное выражение для соответствия точек по общему имени</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">hw-supported-modes</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">a | a-turbo | ac | an | b | g | g-turbo | gn</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Match radios by supported wireless modes</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">identity-regexp</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">string</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Regular expression to match radios by router identity</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">ip-address-ranges</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">IpAddressRange[,IpAddressRanges] max 100x</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">&quot;&quot;</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Match CAPs with IPs within configured address range.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">master-configuration</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">string</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Если действие (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;"> action </span><span style=" font-family:'Sans Serif'; font-size:9pt;">) указывает на создание интерфейсов, то будет создан новый мастер-интерфейс с его конфигурацией, настроенной на этот профиль конфигурации </span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">name-format</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">cap | identity | prefix | prefix-identity</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">cap</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">указать синтаксис создания имени интерфейса CAP </span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">cap - default name </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">identity - CAP boards system identity name </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">prefix - name from the name-prefix value </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">prefix-identity - name from the name-prefix value and the CAP boards system identity name </li></ul></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">name-prefix</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">string</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">префикс имени, который можно использовать в формате имени для создания имен интерфейса CAP</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">radio-mac</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">MAC address</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">00:00:00:00:00:00</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">MAC address of radio to be matched, empty MAC (00:00:00:00:00:00) means match all MAC addresses</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">slave-configurations</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">string</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: )</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Если действие (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;"> action </span><span style=" font-family:'Sans Serif'; font-size:9pt;">) указывает на создание интерфейсов, то создается новый подчиненный интерфейс для каждого профиля конфигурации в этом списке.</span></p></td></tr></table>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="Seamless_roaming_on_CAPSMAN"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Б</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">есшовный роуминг на CAPSMAN есть ли он или имитация с помощью Access List</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Клиентское устройство</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> является главным, когда дело доходит до роуминга, принимая почти все решения о том, когда и куда подключаться. Но AP может влиять на процесс роуминга с помощью приведенных ниже методов. Однако во всех случаях </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Клиент</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> принимает окончательное решение о том, куда подключаться.</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Задержка ответов на запросы аутентификации <span style=" font-weight:600;">Клиента</span>. Обычно это используется для управления <span style=" font-weight:600;">Клиентом</span> с помощью <span style=" font-weight:600;">диапазона (band)</span>, задерживая ответ на проверку подлинности на <span style=" font-weight:600;">диапазон (band)</span>, на который AP не хочет чтобы подключаться <span style=" font-weight:600;">Клиент</span>. Поскольку <span style=" font-weight:600;">Клиент</span> видит, что AP на предпочитаемый <span style=" font-weight:600;">диапазон (band)</span> отвечает первым, и он обычно подключается к нему (<span style=" font-weight:600;">Band Steering</span>) </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Отказ в аутентификации <span style=" font-weight:600;">Клиента</span>. Это используется для ограничения загрузки AP, то есть количества подключенных <span style=" font-weight:600;">Клиентов</span> (<span style=" font-weight:600;">Client Association Limits</span>) </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Де-аутентификация, то есть принуждение <span style=" font-weight:600;">Клиент</span> к отключению. Обычно это делается в крайнем случае по очевидным причинам. </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Предоставление оптимизированного списка точек доступа для роуминга, например, Neighbor Reports (<span style=" font-weight:600;">802.11k - Neighbor Reports</span>) </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Предоставление информации о нагрузке на другие точки доступа (<span style=" font-weight:600;">802.11v - BSS Transition Management Frames</span>) </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Ускорение процесса роуминга путем обеспечения быстрой аутентификации (<span style=" font-weight:600;">802.11r - Fast BSS Transition</span>) </li></ul>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Client Association Limits</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> - </span><span style=" font-family:'monospace'; font-size:9pt;">max-sta-count</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> присутствует </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">802.11r</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> - На данный момент реализация отсутствует </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Band Steering</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (Технология распределения между диапазонами частот обеспечивает подключение клиентов к беспроводной сети на подходящем для них диапазоне частот. режим Предпочитать 5 ГГц; режим Предпочитать 2.4 ГГц;) отсутствует, но мы можем имитировать это следующим способом: </span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">уменьшив мощность на выходе с передатчика для 2.4 ГГц чтобы она была меньше на 5 Дб чем в 5 ГГц (2.4 ГГц &lt; 5 ГГц) соответственно растет процент подключенных клиентских устройств в 5 ГГц </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">задав разные SSID для 2.4 ГГц и 5 ГГц и регулируя уровень принимаемого сигнала с помощью параметра <span style=" font-family:'monospace';">ssid-regexp=&quot;&quot;</span> </li></ul>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Airtime Fairness</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (Функция равного доступа к радиоэфиру, гарантирует, что все подключенные клиенты получат равный доступ к радиоэфиру независимо от скорости передачи данных для того или иного устройства.) отсутствуют </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">надеемся что специалисты MikroTik смогут реализовать это программно на базе устройств с Qualcomm Atheros IPQ4019 их производительность и потенциал достаточен для этого </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Все что нам доступно на текущий момент это управление уровнем принимаемого сигнала через Access List на клиентском устройстве не путайте это с уровнем сигнала на CAP</span></p>
+<p style=" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Access List</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Список доступа в CAPsMAN - это упорядоченный список правил, который используется для разрешения / запрещения клиентам подключения к любому CAP под управлением CAPsMAN. Когда клиент пытается подключиться к CAP, который контролируется CAPsMAN, CAP перенаправляет этот запрос в CAPsMAN. В рамках процесса регистрации CAPsMAN обращается к списку доступа, чтобы определить, разрешено ли клиенту подключаться. Поведение списка доступа по умолчанию - это разрешить соединение. </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Правила списка доступа обрабатываются один за другим, пока не будет найдено правило соответствия. Затем выполняется действие в правиле сопоставления. Если действие указывает, что клиент должен быть принят, клиент принимается, потенциально переопределяя его параметры соединения по умолчанию с теми, которые указаны в правиле списка доступа. </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Список доступа настроен в </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">/caps-man access-list</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> menu. Существуют следующие параметры для правил списка доступа:</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">параметры соответствия клиента:</li></ul>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 2;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">address - MAC address клиентского устройства </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">mask - MAC адреса маску, применяемую при сравнении адреса клиента </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">interface - выбор из списка доступных как статических так и динамических интерфейсов к которым клиент будет подключаться </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">time - время и день когда совпадение когда значение совпадет с условием </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">signal-range - уровень сигнала RSSI которое должно совпасть с условием </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">allow-signal-out-of-range</span> - доступно c <span style=" font-weight:600;">RouterOS 6.41rc31</span> </li></ul>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;"># в настройках wireless если настраивать точку через CAPsMAN допустимы следующие параметры: числовое значение - 00:00:10 (можно задавать значение самостоятельно) и значение = always</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man access-list add action=reject allow-signal-out-of-range=10s disabled=no interface=any mac-address=00:00:00:00:00:00 mac-address-mask=00:00:00:00:00:00 signal-range=-120..-70 ssid-regexp=&quot;&quot;</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Используя значения чувствительности из диагармы ниже, можно примерно регулировать скорость подключения которую клиент получит не позволяя ему подключаться к сети </span><img src="image1542460579hc9u9ndei9.png" /><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;"># ниже пример для интерфейса wlan1 (диапазон 2.4) в настройках wireless если настраивать точку </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">БЕЗ CAPsMAN</span><span style=" font-family:'Sans Serif'; font-size:9pt;">, тут все намного проще можно даже контролировать уроваень сигнала для каждого диапазона (wlan1)</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579fzrp59do0t.png" /></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/interface wireless access-list add mac-address=00:00:00:00:00:00 interface=wlan1 signal-range=-120..-70 allow-signal-out-of-range=10s authentication=yes forwarding=yes ap-tx-limit=0 client-tx-limit=0 private-algo=none private-key=&quot;&quot; private-pre-shared-key=&quot;&quot; management-protection-key=&quot;&quot; vlan-mode=default vlan-id=1</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;"># в предыдущих RouterOS все реализовывалось следующим простейшим образом, всем устройствам с уровнем сигнала -70..120 можно подключаться соответственно с уровнем сигнала -120..-71 не подключишься </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man access-list add action=accept disabled=no interface=all signal-range=-70..120</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man access-list add action=reject disabled=no interface=all signal-range=-120..-71</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">action parameter - определяет действие, которое следует предпринять, когда клиент подключается:</li>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 2;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">accept - разрешить подключение </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">reject - отклонить подключение </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">query-radius - запрос RADIUS server если конкретному клиенту разрешено подключаться </li></ul>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">параметры подключения:</li></ul>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 2;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">ap-tx-limit - tx speed limit in direction to client </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">client-tx-limit - tx speed limit in direction to AP (applies to RouterOS clients only) </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">client-to-client-forwarding - specifies whether to allow forwarding data received from this client to other clients connected to the same interface </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">private-passphrase - PSK passphrase to use for this client if some PSK authentication algorithm is used </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">radius-accounting - specifies if RADIUS traffic accounting should be used if RADIUS authentication gets done for this client </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">vlan-mode - VLAN tagging mode specifies if traffic coming from client should get tagged (and untagged when going to client). </li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">vlan-id - VLAN ID to use if doing VLAN tagging. </li></ul>
+<p style=" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="Access_Point_Settings_-_CAP"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Н</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">астройки точки доступа - CAP</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/system-reset no-defaults=yes</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;"># полностью стираем конфигурацию роутера включая конфигурацию по умолчанию</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579lqraqz8tkl.png" /><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/system identity set name=AP</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;"># задаем название точки</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579ee8wqu8gwl.png" /><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/interface bridge add fast-forward=no name=bridge1<br />/interface bridge port add bridge=bridge1 interface=all</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;"># учитывая изменения настроек bridge в RouterOS v6.40rc36-rc40 and v6.41rc1+ hardware offloading (hw-offload) добавим все доступные интерфейсы, protocol-mode автоматически будет rstp</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600; font-style:italic;">protocol-mode</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> (</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">none | rstp | stp | mstp</span><span style=" font-family:'Sans Serif'; font-size:9pt;">; Default: </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">rstp</span><span style=" font-family:'Sans Serif'; font-size:9pt;">)</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Select Spanning tree protocol (STP) or Rapid spanning tree protocol (RSTP) to ensure a loop-free topology for any bridged LAN. RSTP provides for faster spanning tree convergence after a topology change. Select MSTP to ensure loop-free topology across multiple VLANs.</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579fb0705wu9w.png" /></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/interface wireless cap set caps-man-addresses=127.0.0.1 enabled=yes interfaces=wlan1,wlan2</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;"># модель роутера может быть любой обычно wlan1=2.4G, а wlan2=5G вариант когда точка и контроллер — это одно устройство &quot;CAP = CAPsMAN&quot;</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">не забываем про вкладку firewall, дадим возможность ходить пакетам от локального CAP к CAPsMAN:</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/ip firewall filter add action=accept chain=input comment=&quot;CAP to CAPsMAN&quot; dst-port=5246,5247 protocol=udp src-address=127.0.0.1</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579nu3ektdt2x.png" /></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/interface wireless cap set enabled=yes interfaces=wlan1,wlan2 discovery-interface=bridge1</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;"># вариант когда точка и контроллер — это разные устройства CAP ≠ CAPsMAN</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/ip dhcp-client add interface=bridge1 use-peer-dns=yes add-default-route=yes disabled=no</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;"># добавим dhcp-client на bridge он получит IP address, так как все удобства управления через VPN по MAC-адресу через winbox не доступны</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579egsmtyghes.png" /></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/ip service<br />set api disabled=yes<br />set api-ssl disabled=yes<br />set ftp disabled=yes<br />set telnet disabled=yes<br />set ssh disabled=yes<br />set www disabled=yes<br />set www-ssl disabled=yes</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;"># отключим все не нужные сервисы кроме winbox, ssh - в последней версии RouterOS отсутствует</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image15424605792932wkosux.png" /></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/system package disable hotspot<br />/system package disable ipv6<br />/system package disable mpls<br />/system package disable ppp<br />/system package disable routing<br />/system package disable security</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;"># отключим все не нужные пакеты в RouterOS после первой перезагрузки они будут помечены серым</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="Results_of_application_settings_in_CAPsMAN"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Р</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">езультаты применения настроек в CAPsMAN (CAP = CAPsMAN)</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image15424605795h88wshplj.png" /><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">В данном примере CAPsMAN и CAP на одном устройстве, видим точки и их интерфейсы получившие настройки </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">[admin@MikroTik] /caps-man interface pr<br />Flags: M - master, D - dynamic, B - bound, X - disabled, I - inactive, R - running <br /># NAME RADIO-MAC MASTER-INTERFACE <br />0 MDBR ;;; radio locked to country 'russia3'<br />5G-MikroTik-1 00:00:00:00:00:BB none <br />1 M B ;;; radio locked to country 'russia3'<br />2.4G-MikroTik-1 00:00:00:00:00:BA none</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">MDBR - master dynamic bound running - для активного динамического интерфейса</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">M B - master bound - для выключенного в CAPsMAN интерфейса</span></p>
+<p style=" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="CAPsMAN_configuration_with_certificates"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">К</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">онфигурация CAPsMAN с сертификатами</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Вариант работы с использованием сертификатов в CAPsMAN для использования параметров как Require Peer Certificate и Lock To Caps Man. Эти параметры повышают безопасность и, в некоторых случаях, стабильность вашей сети CAPsMAN. CAP не будут подключаться к CAPsMAN без специального сертификата и наоборот. </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Это базовая конфигурация для использования сертификатов в настройке CAPsMAN. В этом примере предполагается, что у вас уже есть базовая конфигурация на CAPsMAN и CAP. Лучше использовать эту конфигурацию в сетях CAPsMAN, которые не постоянно растут.</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="CAPsMAN_with_certificates"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">C</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">APsMAN</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Создадим сертификат В меню «Менеджер CAPsMAN» установите «Сертификат» и «Сертификат CA» в положение auto:</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image15424605793ffbh89dq3.png" /><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man manager set ca-certificate=auto certificate=auto</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;"># проверим результат изготовления сертификатов</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">[admin@MikroTik] &gt; /caps-man manager print<br />enabled: yes<br />certificate: auto<br />ca-certificate: auto<br />package-path: <br />upgrade-policy: none<br />require-peer-certificate: no<br />generated-certificate: CAPsMAN-D46237916C00<br />generated-ca-certificate: CAPsMAN-CA-D46237916C00</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Сначала устройство CAPsMAN будет генерировать CA-Certificate, а затем будет генерировать сертификат, который зависит от CA-Certificate.</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="CAP_with_certificates"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">C</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">AP</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">#Зададим в конфигурации CAP запрос сертификата:</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image154246057958c9r99vh3.png" /><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/interface wireless cap set certificate=request</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">CAP будет подключаться к CAPsMAN и запрашивать сертификат. CAP получит форму CA-Certificate CAPsMAN, а другой сертификат будет создан для использования в CAP.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">На устройстве CAP в меню CAP установлен требуемый сертификат:</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;"> /interface wireless cap&gt; /interface wireless cap print<br />enabled: yes<br />interfaces: wlan1,wlan2<br />certificate: request<br />lock-to-caps-man: no<br />discovery-interfaces: bridge1<br />caps-man-addresses: <br />caps-man-names:<br />caps-man-certificate-common-names: <br />bridge: none<br />static-virtual: no<br />requested-certificate: CAP-D46237916C00</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Если вы хотите разрешить только CAP с действительным сертификатом для подключения к этому CAPsMAN, вы можете установить Require Peer Certificate на yes на устройстве CAPsMAN:</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579s20gawp72a.png" /><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/caps-man manager set require-peer-certificate=yes</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Однако, когда вы захотите добавить новые CAP-устройства в свою сеть CAPsMAN, вам придется установить этот параметр равным нулю, а затем вернуться к дам после получения сертификатами CAP. Каждый раз, когда вы меняете этот параметр, CAPsMAN удаляет все динамические интерфейсы, и CAP попытаются снова подключиться. </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Если вы хотите заблокировать CAP для определенного CAPsMAN и убедитесь, что он не будет подключаться к другим CAPsMANs, вы должны установить опцию Lock To CAPsMAN на yes. Кроме того, вы можете указать CAPsMAN для блокировки, установив общие имена сертификатов CAPsMAN на устройстве CAP:</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579ql6mwnul10.png" /><span style=" font-family:'Sans Serif'; font-size:9pt;"> </span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/interface wireless cap<br />set lock-to-caps-man=yes<br />set caps-man-certificate-common-names=CAPsMAN-D46237916C00</span></p>
+<p style=" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="CAPsMAN_state_of_the_connected_CAPs"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">C</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">APsMAN состояние подключенных CAPs с сертификатами</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1542460579o6pgvg5kbn.png" /></p></body></html>
