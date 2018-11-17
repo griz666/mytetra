@@ -14,13 +14,7 @@
     <node crypt="" id="1542220025d6vjz0jfu6" name="Mikrotik">
      <recordtable>
       <record id="1542220328vzo2s5flp7" name="Микротик в роли тестера" author="" url="https://habr.com/post/364593/" tags="mikrotik, тестер, diy" ctime="20181114213208" dir="15422203283686qe6ltm" file="text.html"/>
-<<<<<<< HEAD
-      <record id="1542460032hzkwq9t51x" name="Бесшовный wifi роуминг с помощью capsman v2 в Микротик" author="" url="https://serveradmin.ru/nastroyka-capsman-v-mikrotik/" tags="mikrotik, wifi, capsman" ctime="20181117160712" dir="1542460032w9dzdhx7ts" file="text.html"/>
-      <record id="1542460383vxjca89997" name="Настройка MikroTik CAPsMAN v2 на hAP ac (2.4 ГГц и 5 ГГц) " author="" url="https://2keep.net/mikrotik-capsman-v2-hap-ac-lite/#___CAP" tags="mikrotik, wifi, capsman" ctime="20181117161303" dir="1542460383qg0s20t6dk" file="text.html"/>
-      <record id="1542460611r4sgl4cqon" name="Настройка MikroTik CAPsMAN v2 роуминг сертификаты " author="" url="http://www.univers-spb.ru/about/news/index.php?news=391#Seamless_roaming_on_CAPSMAN" tags="mikrotik, wifi, capsman" ctime="20181117161651" dir="1542460611fuj1gfpq06" file="text.html"/>
-=======
       <record id="1542267802m4stskmgf6" name="Подробный разбор настройки CapsMan" author="" url="https://www.technotrade.com.ua/Articles/MikroTik_CAPsMAN_setup_2016-08-05.php" tags="mikrotik, capsman, настройка, wifi" ctime="20181115104322" dir="1542267802410egppoe0" file="text.html"/>
->>>>>>> 3beb562b684f43d9cced884b5d3dee4675fe163f
      </recordtable>
     </node>
     <node crypt="" id="1542220049cbnnakcpkh" name="Unifi"/>
@@ -29,6 +23,11 @@
     <node crypt="" id="1542267664jstogs8u9d" name="Проблемы и решения">
      <recordtable>
       <record id="1542260914i2a99jhj4h" name="Не загружается из за случайных чисел" author="" url="http://liberatum.ru/e/dev-random-urandom-haveged" tags="Linux, энтропия, загрузка, проблема" ctime="20181115104104" dir="154226091447jbo6tzw3" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="15424864394lsj8rldmy" name="Пакеты">
+     <recordtable>
+      <record id="15424862763z5osmxeqh" name="Памятка по управлению пакетами с помощью aptitude" author="" url="https://admins.su/pamyatka-po-upravleniyu-paketami-s-pomoshhyu-aptitude-v-debian-ubuntu-etc/" tags="debian, aptitude, пакеты" ctime="20181117232722" dir="1542486276aim264t93d" file="text.html"/>
      </recordtable>
     </node>
    </node>

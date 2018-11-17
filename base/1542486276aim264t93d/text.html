@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head><meta name="qrichtext" content="1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'DejaVu Sans'; font-size:11pt; font-weight:400; font-style:normal;">
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="https://admins.su/pamyatka-po-upravleniyu-paketami-s-pomoshhyu-aptitude-v-debian-ubuntu-etc/"><span style=" font-size:x-large; font-weight:600; text-decoration: underline; color:#0000ff;">Памятка по управлению пакетами с помощью aptitude в Debian, Ubuntu etc.</span></a><span style=" font-size:x-large; font-weight:600;">  </span><a href="https://admins.su/pamyatka-po-upravleniyu-paketami-s-pomoshhyu-aptitude-v-debian-ubuntu-etc/#comments"><span style=" font-size:x-large; font-weight:600; text-decoration: underline; color:#0000ff;">2</span></a><span style=" font-size:x-large; font-weight:600;"> </span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">27.03.2013  <a href="https://admins.su/author/admin/"><span style=" text-decoration: underline; color:#0000ff;">Max Isaev</span></a>  <a href="https://admins.su/category/linux/linux-dlya-nachinayushhix/"><span style=" text-decoration: underline; color:#0000ff;">Linux для начинающих</span></a> </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Эта статья представляет из себя памятку по управлению пакетами в Debian и его приемниках Ubuntu, Mint и т.д. с помощью aptitude. Этот мощнейший инструмент позволяет поддерживать систему в порядке, отлично отрабатывая зависимости. Aptitude являет собой полноценную и многофункциональную программу, позволяющую выполнять все действия не только в командном, но и в интерактивном режиме.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="more-188"></a><span style=" font-weight:600;">К</span><span style=" font-weight:600;">лючи Aptitude.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">В рамках статьи я указываю только ключи, на мой взгляд важные. Остальные ключи вы можете посмотреть в help, который можно выполнить командой: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e39637ea796715482"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">pitude --help</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e39637ea796715482-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">pitude</span><span style=" font-size:12px;"> --help</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">-s Симуляция выполнения, никакие изменения не применяются.<br />-d Скачивание пакета без установки.<br />-P Автоподтверждение всех запросов на значения по умолчанию.<br />-y На все запросы Да/Нет отвечать Да.<br />-f Пытаться исправить поврежденные пакеты.<br />-v Показать дополнительную информацию.<br />-t [release] Указать релиз пакета для установки.<br />-q Показать индикатор прогресса.<br />—with(out)-recommends Устанавливать ли рекомендуемое окружение<br />-u Обновить списки пакетов при загрузке (только для интерактивного режима).</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">Интерактивный режим.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Для перехода в интерактивный режим просто выполните команду aptitude без ключей. </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e39637f8579687155"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e39637f8579687155-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">Обновление списков пакетов.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Списки пакетов обновляются из всех репозиториев, указанных в файле /etc/apt/sources.list. </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e39637fb234945142"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude update</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e39637fb234945142-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">update</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">Обновление пакетов.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Массовое обновление пакетов можно выполнить, используя следующие команды: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e39637fe041005362"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude safe-upgrade</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e39637fe041005362-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">safe-upgrade</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"> Aptitude обновит все пакеты, для которых не требуется удаления других пакетов.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">или </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963800408308820"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude full-upgrade</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963800408308820-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">full-upgrade</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"> Aptitude обновит все пакеты, удалив требуемые для успешного обновления пакеты.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">или </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963803523565800"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude full-upgrade aptitude dist-upgrade</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">2 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963803523565800-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">full-upgrade</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963803523565800-2"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">dist-upgrade</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Обе команды идентичны. Любая из них обновит все пакеты, для которых есть новые версии.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">Поиск пакетов.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">aptitude search PACKAGE</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Пример: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963805342693015"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude search drbd</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963805342693015-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">search drbd</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">В моем случае вернулись следующие данные: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963807358280960"></a><span style=" font-size:12px;">v</span><span style=" font-size:12px;"> drbd-utils - p drbd8-utils RAID 1 over tcp/ip for Linux utilities p drbdlinks - Manages symlinks into a shared DRBD partition</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">2</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">3 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963807358280960-1"></a><span style=" font-size:12px;">v</span><span style=" font-size:12px;"> drbd-utils - </span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963807358280960-2"></a><span style=" font-size:12px;">p</span><span style=" font-size:12px;"> drbd8-utils RAID 1 over tcp/ip for Linux utilities </span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963807358280960-3"></a><span style=" font-size:12px;">p</span><span style=" font-size:12px;"> drbdlinks - Manages symlinks into a shared DRBD partition</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Как мы видим в примере, перед каждым из пакетов стоит некая буква. Из-за этой буквы я больше люблю именно aptitude, а не apt, так как можно сразу наглядно узнать статус пакета. Иногда пакет может иметь несколько статусов -основной и дополнительный.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">Возможные статусы.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Основные:</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">p – Неустановленный или полностью удаленный пакет.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">i – Установленный пакет. Сокращенно от installed.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">c – Удаленный пакет с сохраненными конфигами.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">v — Виртуальный пакет. В нем могут быть описаны несколько реальных пакетов, которые будут установлены при попытке его инсталляции.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">Дополнительные статусы:</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">A – Встречается в комбинации с i (i A). Говорит о том, что пакет был установлен автоматически как зависимый. Любому пакету можно присвоить этот статус командой markauto, снять отметку можно командой unmarkauto: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e396380a973713940"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude markauto mc aptitude unmark auto mc</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">2 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e396380a973713940-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">markauto mc</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e396380a973713940-2"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">unmark auto mc</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">B – Встречается в комбинации с i (i B). Пакет, потерявший зависимости или просто испорченный.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">C – Встречается в комбинации с i (i C). Не до конца сконфигурированный пакет. Такой статус можно получить при прерывании установки на моменте настройки.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">h – Встречается в комбинации с i (i h). Замороженный (hold) пакет. Статус обозначает пакеты, обновление которых запрещено</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">H – Встречается в комбинации с i (i H). не до конца установленный пакет. Такой статус можно получить при прерывании установки.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">u – Встречается в комбинации с p (p u). Скаченный, распакованный, но не установленный пакет.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">На поиск можно накладывать дополнительные условия.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">~n — искать в имени пакета.<br />~d — искать в описании пакета.<br />~s — искать в разделе репозитория.<br />~i — искать только в установленных пакетах.<br />~U — искать только в пакетах, которые можно обновить.<br />«|» — запросить альтернативы.<br />«!» — символ отрицания.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Например найдем виртуальные пакеты, в имени которых встречается «top», в описании слово «Build». </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e396380c658681460"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude search '~ntop~dBuild'</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e396380c658681460-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">search '~ntop~dBuild'</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">Просмотр информации о пакете.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Для просмотра информации о пакете можно воспользоваться командой show. </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963811717262052"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude show mc</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963811717262052-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">show mc</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Команды вернет результат, похожий на этот. </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201"></a><span style=" font-size:12px;">P</span><span style=" font-size:12px;">ackage: mc State: installed Automatically installed: no Version: 3:4.8.3-10 Priority: optional Section: utils Maintainer: Debian MC Packaging Group &amp;lt;pkg-mc-devel@lists.alioth.debian.org&amp;gt; Architecture: amd64 Uncompressed Size: 1,331 k Depends: e2fslibs (&amp;gt;= 1.42.2), libc6 (&amp;gt;= 2.11), libcomerr2 (&amp;gt;= 1.01), libglib2.0-0 (&amp;gt;= 2.24.0), libgpm2 (&amp;gt;= 1.20.4), libslang2 (&amp;gt;= 2.2.4), mc-data (= 3:4.8.3-10) Recommends: mime-support, unzip, perl Suggests: zip, bzip2, links | w3m | lynx, arj, file, xpdf | pdf-viewer, dbview, odt2txt, gv, catdvi, djvulibre-bin, imagemagick, python, python-boto, python-tz Description: Midnight Commander - a powerful file manager GNU Midnight Commander is a text-mode full-screen file manager. It uses a two panel interface and a subshell for command execution. It includes an internal editor with syntax highlighting and an internal viewer with support for binary files. Also included is Virtual Filesystem (VFS), that allows files on remote systems (e.g. FTP, SSH servers) and files inside archives to be manipulated like real files. Homepage: http://www.midnight-commander.org</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">2</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">3</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">4</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">5</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">6</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">7</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">8</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">9</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">10</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">11</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">12</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">13</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">14</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">15</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">16 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963813704880201-1"></a><span style=" font-size:12px;">P</span><span style=" font-size:12px;">ackage</span><span style=" font-size:12px;">: mc </span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-2"></a><span style=" font-size:12px;">S</span><span style=" font-size:12px;">tate</span><span style=" font-size:12px;">: installed</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-3"></a><span style=" font-size:12px;">A</span><span style=" font-size:12px;">utomatically </span><span style=" font-size:12px;">installed: no</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-4"></a><span style=" font-size:12px;">V</span><span style=" font-size:12px;">ersion</span><span style=" font-size:12px;">: 3:4.8.3-10</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-5"></a><span style=" font-size:12px;">P</span><span style=" font-size:12px;">riority</span><span style=" font-size:12px;">: optional</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-6"></a><span style=" font-size:12px;">S</span><span style=" font-size:12px;">ection</span><span style=" font-size:12px;">: utils</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-7"></a><span style=" font-size:12px;">M</span><span style=" font-size:12px;">aintainer</span><span style=" font-size:12px;">: Debian MC Packaging Group &amp;lt;pkg-mc-devel@lists.alioth.debian.org&amp;gt;</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-8"></a><span style=" font-size:12px;">A</span><span style=" font-size:12px;">rchitecture</span><span style=" font-size:12px;">: amd64</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-9"></a><span style=" font-size:12px;">U</span><span style=" font-size:12px;">ncompressed </span><span style=" font-size:12px;">Size: 1,331 k</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-10"></a><span style=" font-size:12px;">D</span><span style=" font-size:12px;">epends</span><span style=" font-size:12px;">: e2fslibs (&amp;gt;= 1.42.2), libc6 (&amp;gt;= 2.11), libcomerr2 (&amp;gt;= 1.01), libglib2.0-0 (&amp;gt;= 2.24.0), libgpm2 (&amp;gt;= 1.20.4), libslang2 (&amp;gt;= 2.2.4), mc-data (= 3:4.8.3-10)</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-11"></a><span style=" font-size:12px;">R</span><span style=" font-size:12px;">ecommends</span><span style=" font-size:12px;">: mime-support, unzip, perl</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-12"></a><span style=" font-size:12px;">S</span><span style=" font-size:12px;">uggests</span><span style=" font-size:12px;">: zip, bzip2, links | w3m | lynx, arj, file, xpdf | pdf-viewer, dbview, odt2txt, gv, catdvi, djvulibre-bin, imagemagick, python, python-boto, python-tz</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-13"></a><span style=" font-size:12px;">D</span><span style=" font-size:12px;">escription</span><span style=" font-size:12px;">: Midnight Commander - a powerful file manager</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-14"></a><span style=" font-size:12px;">G</span><span style=" font-size:12px;">NU </span><span style=" font-size:12px;">Midnight Commander is a text-mode full-screen file manager. It uses a two panel interface and a subshell for command execution. It includes an internal editor with syntax highlighting and an internal viewer with support for binary files. Also included is Virtual Filesystem (VFS), that allows files on remote</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-15"></a><span style=" font-size:12px;">s</span><span style=" font-size:12px;">ystems</span><span style=" font-size:12px;"> (e.g. FTP, SSH servers) and files inside archives to be manipulated like real files.</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963813704880201-16"></a><span style=" font-size:12px;">H</span><span style=" font-size:12px;">omepage</span><span style=" font-size:12px;">: http://www.midnight-commander.org</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Выполним команду: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963816562723820"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude -v show mc</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963816562723820-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude</span><span style=" font-size:12px;"> -v show mc</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Вернется результат со всеми версиями пакетов в репозитории.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Чтобы запросить информацию по нескольким пакетам, перечислим их через пробел. </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963818653007041"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude -v show mc htop</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963818653007041-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude</span><span style=" font-size:12px;"> -v show mc htop</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">Просмотр зависимых пакетов.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Для того, чтобы посмотреть зависимые пакеты, воспользуемся командой why. </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e396381b586513410"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude why dbview</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e396381b586513410-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">why dbview</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">Просмотр конфликтующих пакетов.</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e396381d667980671"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude why-not имя_пакета.</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e396381d667980671-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">why-not имя_пакета.</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">При выполнении команды система покажет список пакетов в системе, с которыми конфликтует запрашиваемые пакет.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">Установка пакета.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">aptitude install</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Например: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e396381f648132801"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude install mc aptitude install atop htop</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">2 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e396381f648132801-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">install mc</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e396381f648132801-2"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">install atop htop</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Все установленные пакеты сначала скачиваются в кэш. Они хранятся там даже после удаления программы. Для очистки кэша можно воспользоваться командами clean и autoclean. Первая удалит весь кэш, второй — только пакеты, которые уже не используются в системе.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Например: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963822045568431"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude clean aptitude autoclean</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12px;">2 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963822045568431-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">clean</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963822045568431-2"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">autoclean</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">Переустановка пакета.</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963824318441340"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude reinstall htop</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963824318441340-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">reinstall htop</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">В результате этой команды будет произведена переустановка пакета, все конфигурационные файлы сбросятся.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">Удаление пакета.</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963827527123536"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude remove mc</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963827527123536-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">remove mc</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Данная команда удалит пакет mc и связанные пакеты (со статусом A), при этом все конфигурационные файлы останутся.<br />Можно удалить сразу несколько пакетов, перечисляя их через пробел. </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963829711688123"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude remove mc htop atop</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963829711688123-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">remove mc htop atop</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">В случае, если нужно удалить пакеты вместе с конфигурационными файлами, воспользуемся командой purge. Конфигурационные пакеты профиля (для mc расположены по пути ~/.mc) останутся нетронутыми. </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e396382b860612711"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude purge mc</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e396382b860612711-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">purge mc</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600;">Заморозка пакета.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Часто бывает потребность оставить конкретную версию пакета, не давая aptitude выполнять с ним какие либо действия. Сделать это можно с помощью команды hold. </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e396382e455267795"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude hold mc</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e396382e455267795-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">hold mc</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Разморозить пакет можно с помощью обратной команды: </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963830155441764"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude unhold mc</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963830155441764-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude </span><span style=" font-size:12px;">unhold mc</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Напоследок расскажу о пасхальном яйце, содержащемся в aptitude.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Наберите команду </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="crayon-5b446e3963832057290213"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude -v moo</span><span style=" font-size:12px;"> </span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><span style=" font-size:12px;">1 </span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:15px;"><a name="crayon-5b446e3963832057290213-1"></a><span style=" font-size:12px;">a</span><span style=" font-size:12px;">ptitude</span><span style=" font-size:12px;"> -v moo</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Теперь каждый раз добавляйте v (-vv -vvv) до получения желаемого результата.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">На этом все, спасибо за внимание. </p></body></html>
