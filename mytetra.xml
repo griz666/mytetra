@@ -4,15 +4,7 @@
  <format version="1" subversion="2"/>
  <content>
   <node crypt="0" icon="" id="1542219045xznge0wft0" name="Техническая документация">
-   <node crypt="0" icon="" id="1542219107whkk93rgnu" name="Android">
-    <node crypt="" id="1542260746wrklgoddqf" name="Linux">
-     <node crypt="" id="1542260760tir1nhbpuj" name="Проблемы и решения">
-      <recordtable>
-       <record id="1542260914i2a99jhj4h" name="Не загружается из за случайных чисел" author="" url="http://liberatum.ru/e/dev-random-urandom-haveged" tags="Linux, энтропия, загрузка, проблема" ctime="20181115084834" dir="154226091447jbo6tzw3" file="text.html"/>
-      </recordtable>
-     </node>
-    </node>
-   </node>
+   <node crypt="0" icon="" id="1542219107whkk93rgnu" name="Android"/>
    <node crypt="0" icon="" id="1542219138spg8cgcbz6" name="Lego Robots">
     <recordtable>
      <record id="15422193147bp4leuri0" name="Прохождение лабиринта" author="" url="http://nxt33.blogspot.com/2013/04/blog-post_5912.html" tags="Lego, роботы" ctime="20181114211514" dir="15422193149c4p8qkjk6" file="text.html"/>
@@ -22,12 +14,35 @@
     <node crypt="" id="1542220025d6vjz0jfu6" name="Mikrotik">
      <recordtable>
       <record id="1542220328vzo2s5flp7" name="Микротик в роли тестера" author="" url="https://habr.com/post/364593/" tags="mikrotik, тестер, diy" ctime="20181114213208" dir="15422203283686qe6ltm" file="text.html"/>
+<<<<<<< HEAD
       <record id="1542460032hzkwq9t51x" name="Бесшовный wifi роуминг с помощью capsman v2 в Микротик" author="" url="https://serveradmin.ru/nastroyka-capsman-v-mikrotik/" tags="mikrotik, wifi, capsman" ctime="20181117160712" dir="1542460032w9dzdhx7ts" file="text.html"/>
       <record id="1542460383vxjca89997" name="Настройка MikroTik CAPsMAN v2 на hAP ac (2.4 ГГц и 5 ГГц) " author="" url="https://2keep.net/mikrotik-capsman-v2-hap-ac-lite/#___CAP" tags="mikrotik, wifi, capsman" ctime="20181117161303" dir="1542460383qg0s20t6dk" file="text.html"/>
       <record id="1542460611r4sgl4cqon" name="Настройка MikroTik CAPsMAN v2 роуминг сертификаты " author="" url="http://www.univers-spb.ru/about/news/index.php?news=391#Seamless_roaming_on_CAPSMAN" tags="mikrotik, wifi, capsman" ctime="20181117161651" dir="1542460611fuj1gfpq06" file="text.html"/>
+=======
+      <record id="1542267802m4stskmgf6" name="Подробный разбор настройки CapsMan" author="" url="https://www.technotrade.com.ua/Articles/MikroTik_CAPsMAN_setup_2016-08-05.php" tags="mikrotik, capsman, настройка, wifi" ctime="20181115104322" dir="1542267802410egppoe0" file="text.html"/>
+>>>>>>> 3beb562b684f43d9cced884b5d3dee4675fe163f
      </recordtable>
     </node>
     <node crypt="" id="1542220049cbnnakcpkh" name="Unifi"/>
+   </node>
+   <node crypt="" id="1542267664su4ugevaim" name="Linux">
+    <node crypt="" id="1542267664jstogs8u9d" name="Проблемы и решения">
+     <recordtable>
+      <record id="1542260914i2a99jhj4h" name="Не загружается из за случайных чисел" author="" url="http://liberatum.ru/e/dev-random-urandom-haveged" tags="Linux, энтропия, загрузка, проблема" ctime="20181115104104" dir="154226091447jbo6tzw3" file="text.html"/>
+     </recordtable>
+    </node>
+   </node>
+   <node crypt="" id="15422771867ffcy2aync" name="Электрика">
+    <recordtable>
+     <record id="1542277240ihmf8ljxf9" name="Системы заземления" author="" url="http://www.zandz.ru/biblioteka/sistemy_zazemlenieya_TNS_TNC_TNCS_TT_IT.html?utm_source=eLama-yandex&amp;utm_campaign=ZZ_ya_poisk_Centr_Znanii_MSK_SPB&amp;utm_term=%D0%A1%D1%85%D0%B5%D0%BC%D0%B0%20%D0%B7%D0%B0%D0%B7%D0%B5%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F&amp;utm_content=cid|30631251|gid|2980914503|aid|4884645360|adp|no|dvc|desktop|pid|11255465537|rid||did|11255465537|pos|premium1|adn|search|crid|0|&amp;utm_medium=cpc&amp;yclid=6781732338613362752" tags="" ctime="20181115132040" dir="1542277240xzpscqp1a4" file="text.html"/>
+     <record id="1542279819oi1dbo5dxd" name="Заземление подробно" author="" url="https://shtyknozh.ru/rabochee-zazemlenie/" tags="электрика, заземление" ctime="20181115140339" dir="1542279819dgg7kydrhi" file="text.html"/>
+    </recordtable>
+   </node>
+  </node>
+  <node crypt="1" icon="" id="1542286006yvalbpm627" name="UkM1U0lNUAMjRaJ4u2OLGqKHY0pUE6UnWNXWzy9dTRF4DHnUeSDTlX62HdPnDSjh6D1lJ6k8PY+L82AL9IbAcvmsAV8iaDL58UD8tcq4DZo=">
+   <node crypt="1" icon="" id="1542286055pmqxfio2t2" name="UkM1U0lNUAMlZDJ3GTQWfiPMzLLoNewI1RBdnhhKTHjRI3HJShhs3dmUFtTzCpIqftGny3IUlO8=">
+    <node crypt="1" icon="" id="1542286088nhhyz1t80j" name="UkM1U0lNUAMbApBiMipV6NJH4/Pbk4z+nIEKCcBz4nfC0GpLvO9gfdzhs8BrkfK6CpXTmyIvp1oP4ekEds3l3g=="/>
+    <node crypt="1" icon="" id="15422861931xseo66876" name="UkM1U0lNUAMw7KcxpBaIzkTnzl+XdyCdS3w4shQVi20EYSvUlse3uykOk3ezr9Jg1UpxOIR/7qmIiWIXhvXOuqz1c/zc5oRF"/>
    </node>
   </node>
  </content>
