@@ -4,7 +4,13 @@
  <format version="1" subversion="2"/>
  <content>
   <node crypt="0" icon="" id="1542219045xznge0wft0" name="Техническая документация">
-   <node crypt="0" icon="" id="1542219107whkk93rgnu" name="Android"/>
+   <node crypt="0" icon="" id="1542219107whkk93rgnu" name="Android">
+    <recordtable>
+     <record id="1542541457p0e5004jdu" name="Как включить Adoptable Storage в смартфоне с Android 6" author="" url="https://www.gadgetstyle.com.ua/45937-xiaomi-adoptable-storage-tips/" tags="android, adoptable storage" ctime="20181118144417" dir="1542541457w7ug77mnlj" file="text.html"/>
+     <record id="1542541556x2b7vw4iyo" name="Как настроить автояркость и откалибровать датчик приближения у Xiaomi Redmi 4A и Redmi 3S" author="" url="http://xiaomi-cafe.ru/2018/05/27/adoptable-storage-xiaomi-adoptable-storage/" tags="android, датчик освещенности" ctime="20181118144556" dir="1542541556ydwsid83w1" file="text.html"/>
+     <record id="1542541611kti4whf0s5" name="Adoptable storage – объединение в один логический раздел внутренней и внешней памяти" author="" url="http://xiaomi-cafe.ru/2018/05/27/adoptable-storage-xiaomi-adoptable-storage/" tags="android, adoptable storage" ctime="20181118144651" dir="154254161154rgsmsw4q" file="text.html"/>
+    </recordtable>
+   </node>
    <node crypt="0" icon="" id="1542219138spg8cgcbz6" name="Lego Robots">
     <recordtable>
      <record id="15422193147bp4leuri0" name="Прохождение лабиринта" author="" url="http://nxt33.blogspot.com/2013/04/blog-post_5912.html" tags="Lego, роботы" ctime="20181114211514" dir="15422193149c4p8qkjk6" file="text.html"/>
@@ -29,6 +35,11 @@
      <recordtable>
       <record id="15424862763z5osmxeqh" name="Памятка по управлению пакетами с помощью aptitude" author="" url="https://admins.su/pamyatka-po-upravleniyu-paketami-s-pomoshhyu-aptitude-v-debian-ubuntu-etc/" tags="debian, aptitude, пакеты" ctime="20181117232722" dir="1542486276aim264t93d" file="text.html"/>
       <record id="1542486570s9cgksxg25" name="установка определенной версии пакета" author="" url="http://nslookup.org.ua/blog/2014/05/29/%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82/" tags="debian, aptitude, версия, пакеты" ctime="20181117232930" dir="15424865700olho96o3a" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="15425417384ftvvlhoh1" name="Экстплуатация">
+     <recordtable>
+      <record id="1542541774n0bxddjnq5" name="Простой способ переноса больших файлов по частям " author="" url="https://habr.com/post/43260/" tags="linux, split, file" ctime="20181118144934" dir="15425417741uqu5mfmqd" file="text.html"/>
      </recordtable>
     </node>
    </node>
