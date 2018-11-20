@@ -19,6 +19,9 @@
     <node crypt="" id="1542744830ogs1da84d9" name="SmallBasic">
      <recordtable>
       <record id="1542744868fyehg8ahn7" name="Функции Small Basic" author="" url="http://scratch.uvk6.info/cto-dalse/programmirovanie-na-microsoft-small-basic/11" tags="SmallBasic" ctime="20181120231428" dir="1542744868o0bwhpmp90" file="text.html"/>
+      <record id="1542744967rwsfheq2a0" name="Операторы условия, логики" author="" url="http://scratch.uvk6.info/cto-dalse/programmirovanie-na-microsoft-small-basic/13-operatory-uslovia-logiki" tags="SmallBasic" ctime="20181120231607" dir="1542744967wr9bwvnk5q" file="text.html"/>
+      <record id="1542745025jv55i87wib" name="Циклы" author="" url="http://scratch.uvk6.info/cto-dalse/programmirovanie-na-microsoft-small-basic/14-cikly" tags="SmallBasic" ctime="20181120231705" dir="1542745025lx6ts47i6h" file="text.html"/>
+      <record id="1542745167x5wre1dmdi" name="Подпрограммы" author="" url="http://scratch.uvk6.info/cto-dalse/programmirovanie-na-microsoft-small-basic/18" tags="SmallBasic" ctime="20181120231927" dir="1542745167oi4w6bbg3l" file="text.html"/>
      </recordtable>
     </node>
    </node>
