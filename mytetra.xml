@@ -14,14 +14,14 @@
    <node crypt="0" icon="" id="1542219138spg8cgcbz6" name="Lego Robots">
     <recordtable>
      <record id="15422193147bp4leuri0" name="Прохождение лабиринта" author="" url="http://nxt33.blogspot.com/2013/04/blog-post_5912.html" tags="Lego, роботы" ctime="20181114211514" dir="15422193149c4p8qkjk6" file="text.html"/>
-     <record id="1542739529v6yx3420u2" name="Несколько примеров EV3Basic" author="" url="http://karandashsamodelkin.blogspot.com/2015/11/ev3-basic_7.html" tags="" ctime="20181120214529" dir="15427395290xjizr9v3j" file="text.html"/>
     </recordtable>
-    <node crypt="" id="1542744830ogs1da84d9" name="SmallBasic">
+    <node crypt="" id="1542744830ogs1da84d9" name="SmallBasic.EV3">
      <recordtable>
       <record id="1542744868fyehg8ahn7" name="Функции Small Basic" author="" url="http://scratch.uvk6.info/cto-dalse/programmirovanie-na-microsoft-small-basic/11" tags="SmallBasic" ctime="20181120231428" dir="1542744868o0bwhpmp90" file="text.html"/>
       <record id="1542744967rwsfheq2a0" name="Операторы условия, логики" author="" url="http://scratch.uvk6.info/cto-dalse/programmirovanie-na-microsoft-small-basic/13-operatory-uslovia-logiki" tags="SmallBasic" ctime="20181120231607" dir="1542744967wr9bwvnk5q" file="text.html"/>
       <record id="1542745025jv55i87wib" name="Циклы" author="" url="http://scratch.uvk6.info/cto-dalse/programmirovanie-na-microsoft-small-basic/14-cikly" tags="SmallBasic" ctime="20181120231705" dir="1542745025lx6ts47i6h" file="text.html"/>
       <record id="1542745167x5wre1dmdi" name="Подпрограммы" author="" url="http://scratch.uvk6.info/cto-dalse/programmirovanie-na-microsoft-small-basic/18" tags="SmallBasic" ctime="20181120231927" dir="1542745167oi4w6bbg3l" file="text.html"/>
+      <record id="1542739529v6yx3420u2" name="Несколько примеров EV3Basic" author="" url="http://karandashsamodelkin.blogspot.com/2015/11/ev3-basic_7.html" tags="" ctime="20181120232149" dir="15427395290xjizr9v3j" file="text.html"/>
      </recordtable>
     </node>
    </node>
