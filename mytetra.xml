@@ -34,7 +34,11 @@
       <record id="1542267802m4stskmgf6" name="Подробный разбор настройки CapsMan" author="" url="https://www.technotrade.com.ua/Articles/MikroTik_CAPsMAN_setup_2016-08-05.php" tags="mikrotik, capsman, настройка, wifi" ctime="20181115104322" dir="1542267802410egppoe0" file="text.html"/>
      </recordtable>
     </node>
-    <node crypt="" id="1542220049cbnnakcpkh" name="Unifi"/>
+    <node crypt="" id="1542220049cbnnakcpkh" name="Unifi">
+     <recordtable>
+      <record id="1543432748w7bmwrnozd" name="Настройка UniFi Mesh" author="" url="https://lanmarket.ua/stats/bolshoy-obzor-i-testirovanie-UniFi-Mesh:-novye-vozmojnosti-dlya-razvertyvaniya-besprovodnyh-setey--rabota-s-UniFi-Controller-5-3" tags="Unifi, WiFi" ctime="20181128221908" dir="1543432748rqoxph3r03" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
    <node crypt="" id="1542267664su4ugevaim" name="Linux">
     <node crypt="" id="1542267664jstogs8u9d" name="Проблемы и решения">
