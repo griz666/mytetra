@@ -33,6 +33,7 @@
      <recordtable>
       <record id="1542220328vzo2s5flp7" name="Микротик в роли тестера" author="" url="https://habr.com/post/364593/" tags="mikrotik, тестер, diy" ctime="20181114213208" dir="15422203283686qe6ltm" file="text.html"/>
       <record id="1542267802m4stskmgf6" name="Подробный разбор настройки CapsMan" author="" url="https://www.technotrade.com.ua/Articles/MikroTik_CAPsMAN_setup_2016-08-05.php" tags="mikrotik, capsman, настройка, wifi" ctime="20181115104322" dir="1542267802410egppoe0" file="text.html"/>
+      <record id="1550084084el3mnl1h1g" name="Настройка OpenVPN клиента на роутере Mikrotik" author="" url="https://voxlink.ru/kb/voip-devices-configuration/ovpnclientmikrotik/" tags="mikrotik, OpenVPN" ctime="20190213215444" dir="15500840844n1peq9bbv" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1542220049cbnnakcpkh" name="Unifi">
@@ -56,6 +57,7 @@
     <node crypt="" id="15425417384ftvvlhoh1" name="Экстплуатация">
      <recordtable>
       <record id="1542541774n0bxddjnq5" name="Простой способ переноса больших файлов по частям " author="" url="https://habr.com/post/43260/" tags="linux, split, file" ctime="20181118144934" dir="15425417741uqu5mfmqd" file="text.html"/>
+      <record id="15500840092kodrw2kek" name="Настройка OpenVPN на Debian/Ubuntu" author="" url="https://webhamster.ru/mytetrashare/index/mtb0/1509879732zr81g23xb1" tags="OpenVPN" ctime="20190213215329" dir="1550084009wzz7uwtpsb" file="text.html"/>
      </recordtable>
     </node>
    </node>
