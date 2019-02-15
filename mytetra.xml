@@ -29,6 +29,9 @@
     </node>
    </node>
    <node crypt="" id="1542220017agbxk14c3z" name="Сети">
+    <recordtable>
+     <record id="1550230850o4w91os1x0" name="Реальная скорость Wi-Fi (на предприятиях)" author="" url="https://habr.com/ru/post/431404/" tags="WiFi, теория" ctime="20190215144050" dir="1550230850s4bwd6nc8k" file="text.html"/>
+    </recordtable>
     <node crypt="" id="1542220025d6vjz0jfu6" name="Mikrotik">
      <recordtable>
       <record id="1542220328vzo2s5flp7" name="Микротик в роли тестера" author="" url="https://habr.com/post/364593/" tags="mikrotik, тестер, diy" ctime="20181114213208" dir="15422203283686qe6ltm" file="text.html"/>
