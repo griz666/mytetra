@@ -39,6 +39,11 @@
       <record id="1550247462cfll9j3b6s" name="Универсальный скрипт переключения 2-х каналов интернета Mikrotik" author="" url="https://habr.com/ru/post/279567/" tags="mikrotik, script" ctime="20190215191742" dir="1550247462n1mx7xld1b" file="text.html"/>
       <record id="1550313453dccw65gifz" name="Скрипт, заменяющий Wachdog" author="" url="https://podarok66.livejournal.com/7825.html" tags="mikrotik, script" ctime="20190216133733" dir="1550313453909gwdgev3" file="text.html"/>
      </recordtable>
+     <node crypt="" id="155074283153srpdwuvz" name="Цикл по настройке 8 статей">
+      <recordtable>
+       <record id="1550742892qgjewtnnkl" name="Часть 8 – Установка и настройка MikroTik DUDE Network Monitor" author="" url="https://gregory-gost.ru/sozdanie-domashney-seti-na-baze-ustroystv-mikrotik-chast-8-ustanovka-i-nastroyka-mikrotik-dude-network-monitor/" tags="mikrotik, wifi, dude" ctime="20190221125452" dir="1550742892pi84kpnbhi" file="text.html"/>
+      </recordtable>
+     </node>
     </node>
     <node crypt="" id="1542220049cbnnakcpkh" name="Unifi">
      <recordtable>
