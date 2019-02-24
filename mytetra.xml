@@ -79,6 +79,11 @@
       <record id="155103372183thrpd1h1" name="Веб-интерфейс для кофеварки на Ajenti через HTCPCP" author="" url="https://habr.com/ru/post/215083/" tags="" ctime="20190224214201" dir="1551033721im3b0qeeuq" file="text.html"/>
      </recordtable>
     </node>
+    <node crypt="" id="1551034204o0zevjis9p" name="Разработка и программинг">
+     <recordtable>
+      <record id="1551034248hrz1cksx2s" name="Ajenti documentation" author="" url="http://docs1.ajenti.org/en/latest/index.html" tags="ajenti" ctime="20190224215048" dir="1551034248yfudtpxsym" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
    <node crypt="" id="15422771867ffcy2aync" name="Электрика">
     <recordtable>
