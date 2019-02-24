@@ -76,6 +76,7 @@
       <record id="15500840092kodrw2kek" name="Настройка OpenVPN на Debian/Ubuntu" author="" url="https://webhamster.ru/mytetrashare/index/mtb0/1509879732zr81g23xb1" tags="OpenVPN" ctime="20190213215329" dir="1550084009wzz7uwtpsb" file="text.html"/>
       <record id="1550432310ujbh2vwpy1" name="Разрешить/заблокировать Ping" author="" url="https://linux-notes.org/razreshit-zablokirovat-ping-icmp-pakety-v-unix-linux/" tags="linux, firewall, ping" ctime="20190217223830" dir="15504323100ask9u3g12" file="text.html"/>
       <record id="1551023978xvzpvafcao" name="Бекап системы штатными средствами. TAR" author="" url="http://aboutubuntu.ru/backup-and-restore-ubuntu-by-tar-and-gz.html" tags="tar, backup" ctime="20190224185938" dir="1551023978hvrupt40u6" file="text.html"/>
+      <record id="155103372183thrpd1h1" name="Веб-интерфейс для кофеварки на Ajenti через HTCPCP" author="" url="https://habr.com/ru/post/215083/" tags="" ctime="20190224214201" dir="1551033721im3b0qeeuq" file="text.html"/>
      </recordtable>
     </node>
    </node>
