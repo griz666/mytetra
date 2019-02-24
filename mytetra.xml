@@ -75,6 +75,7 @@
       <record id="1542541774n0bxddjnq5" name="Простой способ переноса больших файлов по частям " author="" url="https://habr.com/post/43260/" tags="linux, split, file" ctime="20181118144934" dir="15425417741uqu5mfmqd" file="text.html"/>
       <record id="15500840092kodrw2kek" name="Настройка OpenVPN на Debian/Ubuntu" author="" url="https://webhamster.ru/mytetrashare/index/mtb0/1509879732zr81g23xb1" tags="OpenVPN" ctime="20190213215329" dir="1550084009wzz7uwtpsb" file="text.html"/>
       <record id="1550432310ujbh2vwpy1" name="Разрешить/заблокировать Ping" author="" url="https://linux-notes.org/razreshit-zablokirovat-ping-icmp-pakety-v-unix-linux/" tags="linux, firewall, ping" ctime="20190217223830" dir="15504323100ask9u3g12" file="text.html"/>
+      <record id="1551023978xvzpvafcao" name="Бекап системы штатными средствами. TAR" author="" url="http://aboutubuntu.ru/backup-and-restore-ubuntu-by-tar-and-gz.html" tags="tar, backup" ctime="20190224185938" dir="1551023978hvrupt40u6" file="text.html"/>
      </recordtable>
     </node>
    </node>
