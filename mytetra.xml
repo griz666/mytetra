@@ -30,6 +30,9 @@
     </node>
    </node>
    <node crypt="" id="1542220017agbxk14c3z" name="Сети">
+    <recordtable>
+     <record id="1551802822dy7ejwwsgu" name="Прошивка Linksys EA2700 на DD-WRT" author="" url="https://forum.dd-wrt.com/phpBB2/viewtopic.php?p=902147" tags="" ctime="20190305192022" dir="1551802822jx4w2q9lyi" file="text.html"/>
+    </recordtable>
     <node crypt="" id="1542220025d6vjz0jfu6" name="Mikrotik">
      <recordtable>
       <record id="1542220328vzo2s5flp7" name="Микротик в роли тестера" author="" url="https://habr.com/post/364593/" tags="mikrotik, тестер, diy" ctime="20181114213208" dir="15422203283686qe6ltm" file="text.html"/>
