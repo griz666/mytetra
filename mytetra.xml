@@ -42,6 +42,7 @@
       <record id="1550153940yz9r3vwrcl" name="Настройка MikroTik CAPsMAN v2 на hAP ac (2.4 ГГц и 5 ГГц)" author="" url="https://2keep.net/mikrotik-capsman-v2-hap-ac-lite/" tags="Mikrotik, CapsMan" ctime="20190214171900" dir="1550153940bdru7zcih7" file="text.html"/>
       <record id="1550247462cfll9j3b6s" name="Универсальный скрипт переключения 2-х каналов интернета Mikrotik" author="" url="https://habr.com/ru/post/279567/" tags="mikrotik, script" ctime="20190215191742" dir="1550247462n1mx7xld1b" file="text.html"/>
       <record id="1550313453dccw65gifz" name="Скрипт, заменяющий Wachdog" author="" url="https://podarok66.livejournal.com/7825.html" tags="mikrotik, script" ctime="20190216133733" dir="1550313453909gwdgev3" file="text.html"/>
+      <record id="1552077444tesef9x8km" name="Настройка OpenVPN сервера и клиента на Mikrotik " author="" url="https://wifisystem.ru/docs/mikrotik/openvpn-server-mikrotik/#vpnserver" tags="mikrotik, openvpn" ctime="20190308233724" dir="1552077444cqx7mzg2wo" file="text.html"/>
      </recordtable>
      <node crypt="" id="155074283153srpdwuvz" name="Цикл по настройке 8 статей">
       <recordtable>
