@@ -54,6 +54,8 @@
      <recordtable>
       <record id="1543432748w7bmwrnozd" name="Настройка UniFi Mesh" author="" url="https://lanmarket.ua/stats/bolshoy-obzor-i-testirovanie-UniFi-Mesh:-novye-vozmojnosti-dlya-razvertyvaniya-besprovodnyh-setey--rabota-s-UniFi-Controller-5-3" tags="Unifi, WiFi" ctime="20181128221908" dir="1543432748rqoxph3r03" file="text.html"/>
       <record id="15522134570awb0zpszw" name="Ubiquiti представили airOS 8.3: да здравствует GPS-синхронизация" author="" url="https://weblance.com.ua/321-ubiquiti-predstavili-airos-83-da-zdravstvuet-gps-sinhronizaciya.html" tags="ubiquite, airos, gps" ctime="20190310132417" dir="1552213457thyh6wx0re" file="text.html"/>
+      <record id="155221428609dmi1l42j" name="предположительно мнятие ограничения countrycode airOS" author="" url="https://forum.nag.ru/index.php?/topic/140520-fiksirovannaya-chastota-v-airos-8-i-dfs/" tags="" ctime="20190310133806" dir="1552214286w6ig2jatpm" file="text.html"/>
+      <record id="15522143560k6m97ta67" name="Инструкция по настройке оборудования Ubiquiti линейки AirMax AC " author="" url="http://skladcabel.ru/instrukcija-po-nastrojke-oborudovanija-ubiquiti-linejki-airmax-ac.html" tags="" ctime="20190310133916" dir="155221435627274fod6b" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="15502323062y748sa8jn" name="WiFi - теория и практика">
