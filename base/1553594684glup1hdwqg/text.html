@@ -1,0 +1,451 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head><meta name="qrichtext" content="1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'DejaVu Sans'; font-size:11pt; font-weight:400; font-style:normal;">
+<p style=" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Screen — несколько экранов в одной SSH сессии</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Published on </span><a href="https://xakinfo.ru/2018/03/screen-more-ssh-in-one-session/"><span style=" font-family:'Sans Serif'; font-size:9pt; text-decoration: underline; color:#0000ff;">11.03.2018</span></a><span style=" font-family:'Sans Serif'; font-size:9pt;"> by </span><a href="https://xakinfo.ru/author/nickolya666/"><span style=" font-family:'Sans Serif'; font-size:9pt; text-decoration: underline; color:#0000ff;">xak</span></a></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="image1553594642xcyt6j3woc.png" /></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Screen — очень удобная программа, если вы часто работаете в консоли, подключившись к серверу по SSH. В таком случае </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">screen</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> позволяет держать в одной консоли несколько разных экранов, удобно переключаясь между ними.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Screen позволяет отключиться от SSH, сохранив выполняющиеся на удаленном сервере задания.</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="_screen"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">У</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">становка screen</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Для установки на Ubuntu нужно выполнить команду</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">$ sudo apt-get install screen</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">После этого нужно запустить screen:</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">$ screen</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">После запуска вы увидите либо приглашение командной строки, либо «экран приветствия», нажав SPACE или ENTER в котором, вы так же попадете в shell. При этом все команды будут запущены уже «внутри» screen’а.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Для того, чтобы выйти из screen’а (выйти, а не отсоединиться) достаточно выйти из всех открытых в нем оболочек, либо же, нажать комбинацию клавиш Ctl-a \, и ответить «y» на вопрос «действительно ли вы хотите выйти».</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Отсоединиться от текущего скрина, не закрывая и не завершая сессии, можно комбинацией Ctrl-a d.</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="_screen-2"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">П</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">одключение к screen</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Если на машине уже есть запущенная screen-сессия, и вы хотите подсоединиться к ней, то</span></p>
+<ol style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">если сессия одна, достаточно просто команды:</li>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">$  screen –x</span></p>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">если сессий несколько, то: посмотреть список запущенных screen’ов можно командой screen -ls:</li></ol>
+<p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;"> </span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">$  screen -ls</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">There are screens on:</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">        2762.pts-0.debian       (Detached)</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">        2743.pts-0.debian       (Detached)</span></p>
+<p style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">2 Sockets in /var/run/screen/S-diesel.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Выбираем нужный нам screen, и присоединяемся к нему:</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;"> screen -x 2762.pts-0.debian</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Названия сессий по-умолчанию малоинформативны — просто номера процессов, если есть желание запустить и использовать несколько screen-сессий для разных задач, можно придумать более вменяемые названия. Придумываем название, затем запускаем новый screen вот таким образом:</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">  $  screen -S &quot;job1&quot;</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">где job1 — это название нашей «именнованной» сессии. Теперь в -ls мы увидим гораздо более понятное:</span></p>
+<p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;"> </span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">$  screen -ls</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">There are screens on:</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">        2762.pts-0.debian       (Detached)</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">        2795.job1       (Detached)</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">        2743.pts-0.debian       (Detached)</span></p>
+<p style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">3 Sockets in /var/run/screen/S-diesel.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">и сможем подсоединиться к сессии job1, просто указав ее имя:</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">$  screen -x job1</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="__screen"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">П</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ереключение между окнами screen</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Как вы уже поняли, сессии сохраняются даже в то время, когда вы отключны от сервера, и все что в них запущено, продолжает выполняться. Впрочем, на этом возможности screen’а не исчерпываются. Иногда, при работе по ssh, очень хочется, чтобы было открыто сразу несколько терминалов, при этом коннектиться несколько раз облом — особенно если коннектиться нужно через несколько серверов. В этом тоже может помочь screen. Просто нажмите Ctrl — a c, и откроется еще один шелл. Перемещаться между открытыми шеллами можно либо через Ctrl — a &lt;Цифра&gt;, где &lt;Цифра&gt; — номер открытого шелла, начиная с нуля, либо Ctrl — a n/Ctrl — a p — вперед назад. Получить список открытых «окон» – консолей (и переключиться на нужную), можно комбинацией клавиш Ctrl — a «; чтобы задать нормальное имя (а не просто скучный «bash») для какого-нить окна, перейдите в него и нажмите Ctrl — a A (регистр имеет значение), затем в появившемся приглашении введите имя.</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="i"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">М</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ониторинг выполнения команды</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Если открыто несколько окон, полезной может быть возможность следить за активностью в каком-то из них. Например, если вы запустили «долгоиграющую» команду и интересно узнать, когда она завершится. Переходим в окно с этой командой, жмем Ctrl — a m, видим надпись типа такой: «Window 0 (bash) is now being monitored for all activity». Когда что-то в окне изменится, screen подаст звуковой сигнал, а в списке окон после номера появится символ «@».</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="__screen-2"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">П</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">рокрутка экрана в screen</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Для просмотра вывода команды, который ушел выше границ окна, нужно нажать Ctrl-a [</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Это переключит screen в Copy mode. Для выхода из этого режима просто нажмите Esc.</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="_screen-3"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">К</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">онфигурация screen</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Конфигурируется screen с помощью файла ~/.screenrc, в вашем домашнем каталоге. Например, можно написать туда:</span></p>
+<p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">caption always &quot;%{= 45}%{+b w}Screen: %n | %h %=%t %c&quot;</span></p>
+<p style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">hardstatus alwayslastline &quot;%-Lw%{= BW}%50&gt;%n%f* %t%{-}%+Lw%&lt;&quot;</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Это даст вам все время видимый список открытых окон, и другую полезную информацию внизу экрана.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Также при запуске Screen по-умолчанию выполняются команды из файла </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">/etc/screenrc</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> и файла </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">.screenrc</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> из домашнего каталога пользователя. Многие команды которые можно использовать в файлах конфигурации были рассмотрены в таблицах выше в поле «Текстовая команда». Ниже представлен пример конфигурации Screen из файла .screenrc:</span></p>
+<p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;"># Отключить вывод лицензионной информации при старте Screen</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">startup_message off</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'monospace'; font-size:9pt;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;"># Открыть оболочку для работы</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">chdir</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">screen -t Work</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'monospace'; font-size:9pt;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;"># Открыть оболочку для управления конфигурацией</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">chdir /etc</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">screen -t Configuration</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'monospace'; font-size:9pt;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;"># Открыть оболочку для просмотра логов</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">chdir /var/log</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">screen -t Logs</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'monospace'; font-size:9pt;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;"># Выбрать первое окошко после старта</span></p>
+<p style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">select 0</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Этот достаточно простой файл конфигурации открывает три окна с именами Work, Configuration, Logs, соответственно в личном каталоге пользователя, в каталоге</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">/etc</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> и каталоге </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">/var/log</span><span style=" font-family:'Sans Serif'; font-size:9pt;">. После запуска на экране будет находиться первое окно с именем Work. На рисунке 1 представлен пример работы Screen с этим файлом конфигурации.</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="_Screen"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">З</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">авершение Screen</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Если по какой-то причине сессия screen перестает отвечать, можно завершить ее. Для этого нужно подключиться к нужной сессии, затем нажать Ctrl — a и ввести команду «:quit».</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Screen завершит работу данной сессии, принудительно закрыв все окна.</span></p>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="_Screen-2"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Р</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">абота со Screen</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Одна из основных возможностей Screen — создание и управление несколькими консольными окнами, или текстовыми приложениями в одном единственном окне терминала. В один момент времени на экране терминала может находится только одно из окон (несколько их может быть только в случае если они делят экран терминала на части). Screen позволяет быстро переключаться между окнами, сохранять и позднее возвращаться к текстовой сессии и открывать доступ к ней другим пользователям. Плюс к этому Screen позволяет давать окнам заголовки, отслеживать активность в каждом окне и обмениваться содержимым окон с помощью копирования и вставки. И, вдобавок, Screen позволяет переназначать клавиши, управлять настройкой эмуляции терминала и решать еще много небольших задач, связанных с текстовыми окнами, в которых может и не быть постоянной необходимости, но которые могут помочь выполнению административной работы в отдельные моменты времени.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">На рисунке изображен Screen с тремя именованными окнами (Work, Configuration, Logs) и открытый в нем текстовым редактором Vim, с примером файла конфигурации Screen.</span></p>
+<p style=" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="i-2"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">П</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ервый запуск</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Screen может быть запущен с помощью консольной команды screen, но прежде всего проверим установлен ли Screen в вашей системе с помощью следующей команды:</span></p>
+<p style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">$ which screen</span></p>
+<p style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">/usr/bin/screen</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Если команда вернула путь как в примере выше, можно сразу начинать пользоваться, в противном случае Screen может быть установлен стандартными средствами поддержки пакетов вашей операционной системы, или скачан с официального сайта </span><a href="http://www.gnu.org/software/screen/"><span style=" font-family:'Sans Serif'; font-size:9pt; text-decoration: underline; color:#0000ff;">http://www.gnu.org/software/screen/ </span></a><span style=" font-family:'Sans Serif'; font-size:9pt;">.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Теперь мы можем запускать Screen, для чего просто набираем:</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">$ screen</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">После запуска на экран может появиться информация о версии и лицензии (при рассмотрении конфигурации мы рассмотрим, как можно отменить вывод данного сообщения) и в этом случае необходимо нажать клавишу «Пробел» или «Ввод», после чего мы попадаем в, на первый взгляд обычную, текстовую оболочку. Надо заметить, что в командной строке сразу можно указать команду для запуска определенного приложения, например, для запуска top надо набрать:</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">$ screen top</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Хорошо, теперь Screen запущен, но, на первый взгляд, нет никаких внешних изменений — мы можем работать в запущенной оболочке, или использовать top.Хитрость в том, что во время работы Screen передает все нажатия клавиш непосредственно приложению, но (по умолчанию) оставляет для себя управляющие команды, начинающиеся с комбинации клавиш </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">Ctrl + a</span><span style=" font-family:'Sans Serif'; font-size:9pt;">.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Эту управляющую комбинацию клавиш можно поменять через файлы конфигурации (которые мы рассмотрим ниже), но во всех примерах будет рассматриваться только конфигурация по умолчанию. Таким образом, все клавиатурные команды Screen состоят из двух клавишных комбинации — управляющей </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">Ctrl + a</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> и непосредственно клавиши, или клавишной комбинации представляющей команду. Практически каждая команда также имеет своего текстового аналога, который можно выполнить, либо через файл конфигурации, либо, выполнив следующую команду:</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><thead>
+<tr>
+<td colspan="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">КЛАВИШНАЯ КОМБИНАЦИЯ</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ТЕКСТОВАЯ КОМАНДА</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ОПИСАНИЕ</span></p></td></tr></thead>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">:</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">colon</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Вывести приглашение для ввода текстовых команд в интерактивном режиме</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">В данном случае мы должны выполнить две клавиатурные комбинации сначала нажав </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">Ctrl + a</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> и затем клавишу двоеточия. При этом Screen выведет в нижней части экрана приглашение для ввода команды в виде двоеточия. Ту же самую команду, которую мы только что выполнили с помощью клавишной комбинации, можно выполнить через конфигурационный файл с помощью текстовой команды</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">colon</span><span style=" font-family:'Sans Serif'; font-size:9pt;">, что может, например, понадобиться для вывода приглашения о вводе команд при старте, или переназначении комбинации клавиш, вызывающих это приглашение. Ниже, как и в примере выше, для каждой клавишной комбинации я буду писать соответствующие им ключевые слова, которые можно использовать в файлах конфигурации, или вводить с помощью </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">Ctrl + a</span><span style=" font-family:'Sans Serif'; font-size:9pt;"> и :.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Здесь может возникнуть закономерный вопрос — а что, если приложению нужно непосредственно передать комбинацию клавиш </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">Ctrl + a</span><span style=" font-family:'Sans Serif'; font-size:9pt;">, которая уже используется в Screen как служебная? Например, такая же комбинация используется библиотекой редактирования командной строки readline для выполнения перехода в начало строки. Для этого случая в Screen предусмотрена следующая команда:</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><thead>
+<tr>
+<td colspan="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">КЛАВИШНАЯ КОМБИНАЦИЯ</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ТЕКСТОВАЯ КОМАНДА</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ОПИСАНИЕ</span></p></td></tr></thead>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">meta</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Передать текущему предложению клавишную комбинацию </span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">Ctrl + a</span></p></td></tr></table>
+<p style=" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="i-3"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">У</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">правление окнами</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">В предыдущем разделе мы научились запускать Screen и выучили основной шаблон для всех клавишных команд. Пришло время разобраться с командами для управления окнами. При запуске Screen создает одно окно (если только в конфигурации не указано создание сразу нескольких окон) и присваивает ему номер 0. Новое окно с командной оболочкой можно создать с помощью команды ниже:</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><thead>
+<tr>
+<td colspan="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">КЛАВИШНАЯ КОМБИНАЦИЯ</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ТЕКСТОВАЯ КОМАНДА</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ОПИСАНИЕ</span></p></td></tr></thead>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">c</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">screen</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Создать новое окно</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">При этом Screen создаст новое окно и присвоит ему следующий по порядку номер.В нашем случае новым окном будет окно с номером 1.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Теперь у нас есть уже два текстовых окна, из которых текущим является только что созданное окно с номером 1, а окно с номером 0 находится в фоновом режиме. Но, надо заметить, что даже если окно находится в фоновом режиме, оно может воспринимать вывод запущенного в нем приложения, как если бы оно было текущим. Например, мы могли бы запустить в окне 0 процесс, который выводит дополнительную информацию через определенные промежутки времени (для примера это может быть команда </span><span style=" font-family:'monospace'; font-size:9pt;">tail -f</span><span style=" font-family:'Sans Serif'; font-size:9pt;">) и затем переключиться в окно 1 для работы в текстовом редакторе. Через какое-то время, если мы захотим посмотреть, что происходит в окне 0, мы можем переключиться в это окно и увидеть весь вывод работающего там процесса. Затем можно переключиться обратно в окно редактирования.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">В предыдущем параграфе я описал пример с переключением между окнами, но пока не сказал какие команды для этого используются. Рассмотрим подробнее наиболее часто используемые команды для управления окнами:</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><thead>
+<tr>
+<td colspan="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">КЛАВИШНАЯ КОМБИНАЦИЯ</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ТЕКСТОВАЯ КОМАНДА</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ОПИСАНИЕ</span></p></td></tr></thead>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">w</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">windows</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Выводит список номеров и заголовков всех окон в нижней строчке экрана</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">«</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">windowlist</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Выводит интерактивный список номеров и заголовков всех окон из которого можно выбрать окошко для переключения</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Номер окна</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">select</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Выбор окна по номеру. Например, команда Ctrl + a и 0 делает текущим окно с номером 0</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctlr + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">n</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">next</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Переключиться на следующее по порядку окно, или на первое окно если мы находились в последнем окне</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">p</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">prev</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Переключиться на предыдущее по порядку окно, или на последнее окно если мы находились в первом окне</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">‘</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">select</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Вывести приглашение ввода номера окна для переключения</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">other</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Переключиться на последнее использованное окно</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">N</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">number</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Показать номер и заголовок текущего окна</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">A</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">title</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Установить заголовок текущего окна</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">k</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">kill</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Принудительное закрытие окна, например, в случае если приложение не удается закрыть обычным способом</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">При закрытии какого-либо из окон номера других окон не меняются и в нумерации появляются «дырки», которые позднее могут быть заполнены новыми окнами.Хотя Screen имеет команду для изменения номера окна, она здесь не рассматривается и остается для самостоятельного изучения. В случае, если закрыты все окна, Screen завершает свою работу и выводит сообщение:</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace'; font-size:9pt;">[screen is terminating]</span></p>
+<p style=" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="i-4"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Р</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">абота с текстом</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Выше мы научились запускать Screen и управлять окнами — создавать их, переключаться от окна к окну, присваивать имена и закрывать. Теперь рассмотрим работу с содержимым окон — копирование и вставку текстового содержимого одного окна в другое, мониторинг окон, сохранение текстовой копии экрана и другие похожие задачи:</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><thead>
+<tr>
+<td colspan="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">КЛАВИШНАЯ КОМБИНАЦИЯ</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ТЕКСТОВАЯ КОМАНДА</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ОПИСАНИЕ</span></p></td></tr></thead>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">M</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">monitor</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Включить/выключить мониторинг активности для текущего окна. Когда мониторинг включен и в окне находящемся в фоновом режиме производится вывод текста, в служебной строке выводится информация об активности.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">—</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">—</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">silence</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Включить/выключить мониторинг отсутствия активности для текущего окна. Когда мониторинг включен и в окне находящемся в фоновом режиме некоторый период времени не производится вывод текста в служебной строке выводится информация об отсутствии активности.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">h</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">hardcopy</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Записать текстовое изображение текущего окна в файл hardcopy.номер_окна в каталоге Screen по умолчанию.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">H</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">log</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Включить/выключить трассировку текста текущего окна в файл screenlog.номер_окна в каталоге Sccreen по умолчанию.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">[</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">copy</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Войти в режим копирования. Дополнительные команды этого режима описаны ниже.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">]</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">paste</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Вставить в окно текст из регистра по умолчанию (куда он предварительно был скопирован с помощью команды выше).</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">В режиме копирования Screen запускает текстовый редактор похожий на редактор Vi. Наиболее часто используемые команды редактора:</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Клавиши управления курсором перемещают курсор по экранному буферу;</li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Клавиша <span style=" font-style:italic;">«Пробел»</span> отмечает начало и конец региона для копирования. При втором нажатии <span style=" font-style:italic;">«Пробел»</span>, отмеченный текст копируется в регистр по умолчанию, и Screen выходит их режима копирования;</li></ul>
+<p style=" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="i-5"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Н</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">есколько окон на экране</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">По умолчанию Screen оставляет видимым на экране только одно логическое окно, но при желании есть дополнительная возможность разделить экран терминала на горизонтальные регионы. Таким образом, можно отображать сразу несколько окон на одном экране терминала. Рассмотрим подробнее команды для работы с регионами экрана:</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><thead>
+<tr>
+<td colspan="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">КЛАВИШНАЯ КОМБИНАЦИЯ</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ТЕКСТОВАЯ КОМАНДА</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ОПИСАНИЕ</span></p></td></tr></thead>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">S</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">split</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Разделить текущее окно, или регион на два новых региона. При этом размеры всех регионов меняются для получения дополнительного пространства на экране и в новом регионе отображается пустое окно.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Tab</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">focus</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Переместить текущий фокус отображения на регион ниже, или на верхний регион если текущим является самый нижний регион.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Q</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">only</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Закрыть все регионы кроме текущего</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">X</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">remove</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Закрыть текущий регион</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">На рисунке 2 изображен Screen с тремя именованными окнами (Work, Configuration, Logs) и разделенным на два региона экраном. В верхнем регионе открыто окно Work с текстовым редактором Vim и примером файла конфигурации Screen. В нижнем регионе окно Configuration с частью общего файла конфигурации /etc/screenrc.</span></p>
+<p style=" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="i-6"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">К</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">онсольные сессии</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">И в завершение, мы рассмотрим одну из самых популярных возможностей Screen.Представим следующую ситуацию: системный администратор, находясь дома, заходит на удаленный сервер, открывает несколько окон, запускает необходимые задачи, затем закрывает соединение и едет на работу. На работе он опять заходит на тот же сервер и восстанавливает открытые дома окна с результатами выполненных задач. Звучит немного фантастично? Ни в коем случае! Консольные сессии Screen как раз и предназначены для осуществления этой задачи. Они позволяют отсоединить от терминала текущую сессию Screen со всеми окнами и выполняемыми приложениями и, затем в любой момент времени присоединиться к ней опять. При этом все выполняемые под Screen приложения будут продолжать работать и использовать свои окна для вывода информации. Плюс ко всему консольных сессий может быть несколько, но в этой статье мы не будем на этом подробно останавливаться.</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Рассмотрим команды отсоединения консольной сессии от терминала:</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><thead>
+<tr>
+<td colspan="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">КЛАВИШНАЯ КОМБИНАЦИЯ</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ТЕКСТОВАЯ КОМАНДА</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ОПИСАНИЕ</span></p></td></tr></thead>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">d</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">detach</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Отсоединить консольную сессию и оставить ее запущенной в фоновом режиме. При этом Screen пишет:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">[detached]</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">D D</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">pow_detach</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Отсоединить консольную сессию, оставить ее запущенной в фоновом режиме и послать родительскому процессу Screen сигнал HANGUP. При запуске Screen из удаленного терминала это означает отсоединение Screen и затем закрытие соединения. При этом Screen пишет:</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-style:italic;">[power detached]</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">z</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">suspend</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Отсоединить консольную сессию и оставить ее запущенной как фоновый процесс родительской командной оболочки. В этом случае для восстановления сессии кроме команд описанных ниже могут быть использованы стандартные команды управления фоновыми процессами командной оболочки</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl + a</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Ctrl +</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">quit</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Закрыть все окна сессии и выйти из Screen.Надо заметить, что многие дистрибутивы переопределяют клавишную комбинацию для этой команды, но текстовую команду можно использовать в любом случае</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Чтобы присоединиться обратно к отсоединенной сессии, или посмотреть список доступных сессий, необходимо запустить Screen с одним из следующих ключей:</span></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="2" cellpadding="0"><thead>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">КОМАНДА ДЛЯ ЗАПУСКА SCREEN</span></p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">ОПИСАНИЕ</span></p></td></tr></thead>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">screen -r</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Присоединиться к отсоединенной сессии.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">screen -R</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Присоединиться к первой подходящей отсоединенной сессии.Это может быть полезно в случае если используется несколько сессии.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">screen -x</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Присоединиться к уже работающей сессии.</span></p></td></tr>
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">screen -ls</span></p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Вывести список доступных сессий.</span></p></td></tr></table>
+<p style=" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;"> </span><a name="i-7"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">Ч</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">то дальше?</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Screen имеет огромное количество различных возможностей и, практически, невозможно описать их все в одной статье, поэтому некоторая часть функциональности осталась «за кадром». Вот некоторые возможности/настройки Screen, которые не были рассмотрены выше и остаются для самостоятельного изучения:</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Команды настройки эмуляции терминала;</li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Многопользовательские консольные сессии;</li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Назначение, или переназначение командам клавишных комбинации;</li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Вспомогательные опции текстовых команд. Например, опция -t команды screen, которая используется в примера файла конфигурации;</li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Редко используемые команды, например, команды, которые можно использовать при настройке запуска Screen — echo и sleep;</li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Переменные среды, которые могут быть полезны при настройке Screen;</li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Дополнительные ключи запуска Screen;</li></ul>
+<p style=" margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="_screen-4"></a><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">А</span><span style=" font-family:'Sans Serif'; font-size:9pt; font-weight:600;">льтернативы screen</span></p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Sans Serif'; font-size:9pt;">Screen — это программа с большой историей, надо заметить, что первая версия появилась в 1987-м году. На данный момент, к Screen, практически, не добавляется новых возможностей (одной из причин может быть наличие уже большого их количества на данный момент) и производится, в основном, только исправление ошибок. Если кому-то не нравится относительная «старость» Screen, или не нужно такое большое количество возможностей, то можно обратиться к одной из следующих программ:</span></p>
+<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">dtach (<a href="http://dtach.sourceforge.net/"><span style=" text-decoration: underline; color:#0000ff;">http://dtach.sourceforge.net/ </span></a>) — основной акцент при разработке этой программы сделан на компактность. По аналогии со Screen она поддерживает возможность работы с консольными сессиями, но не имеет других возможностей Screen.</li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">SplitVT (<a href="http://www.devolution.com/~slouken/projects/splitvt/"><span style=" text-decoration: underline; color:#0000ff;">http://www.devolution.com/~slouken/projects/splitvt/ </span></a>) — позволяет разделать экран терминала на две половинки и работать сразу с двумя программными оболочками.</li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Tmux (<a href="http://sourceforge.net/projects/tmux"><span style=" text-decoration: underline; color:#0000ff;">http://sourceforge.net/projects/tmux </span></a>) — для работы с консольными сессиями Tmux использует модель клиент-сервер.</li>
+<li style=" font-family:'Sans Serif'; font-size:9pt;" style=" margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Twin (<a href="http://linuz.sns.it/~max/twin/"><span style=" text-decoration: underline; color:#0000ff;">http://linuz.sns.it/~max/twin/ </span></a>) — попытка создать текстовый оконный интерфейс аналогичный графическим собратьям.</li></ul></body></html>

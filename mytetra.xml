@@ -59,6 +59,7 @@
       <record id="15522134570awb0zpszw" name="Ubiquiti представили airOS 8.3: да здравствует GPS-синхронизация" author="" url="https://weblance.com.ua/321-ubiquiti-predstavili-airos-83-da-zdravstvuet-gps-sinhronizaciya.html" tags="ubiquite, airos, gps" ctime="20190310132417" dir="1552213457thyh6wx0re" file="text.html"/>
       <record id="155221428609dmi1l42j" name="предположительно мнятие ограничения countrycode airOS" author="" url="https://forum.nag.ru/index.php?/topic/140520-fiksirovannaya-chastota-v-airos-8-i-dfs/" tags="" ctime="20190310133806" dir="1552214286w6ig2jatpm" file="text.html"/>
       <record id="15522143560k6m97ta67" name="Инструкция по настройке оборудования Ubiquiti линейки AirMax AC " author="" url="http://skladcabel.ru/instrukcija-po-nastrojke-oborudovanija-ubiquiti-linejki-airmax-ac.html" tags="" ctime="20190310133916" dir="155221435627274fod6b" file="text.html"/>
+      <record id="1553594840t78r0uo5m5" name="Обновление прошивок. Простое и &quot;со звездочкой&quot;." author="" url="https://asp24.ru/ubiquiti/kak-obnovit-ili-izmenit-proshivku-na-oborudovanii-ubiquiti-unifi/" tags="ubnt, прошивка" ctime="20190326130720" dir="15535948408reaj8u3ar" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="15502323062y748sa8jn" name="WiFi - теория и практика">
@@ -88,6 +89,8 @@
       <record id="1550432310ujbh2vwpy1" name="Разрешить/заблокировать Ping" author="" url="https://linux-notes.org/razreshit-zablokirovat-ping-icmp-pakety-v-unix-linux/" tags="linux, firewall, ping" ctime="20190217223830" dir="15504323100ask9u3g12" file="text.html"/>
       <record id="1551023978xvzpvafcao" name="Бекап системы штатными средствами. TAR" author="" url="http://aboutubuntu.ru/backup-and-restore-ubuntu-by-tar-and-gz.html" tags="tar, backup" ctime="20190224185938" dir="1551023978hvrupt40u6" file="text.html"/>
       <record id="155103372183thrpd1h1" name="Веб-интерфейс для кофеварки на Ajenti через HTCPCP" author="" url="https://habr.com/ru/post/215083/" tags="" ctime="20190224214201" dir="1551033721im3b0qeeuq" file="text.html"/>
+      <record id="1553594684p383cfmgrr" name="Screen — несколько экранов в одной SSH сессии" author="" url="https://xakinfo.ru/2018/03/screen-more-ssh-in-one-session/" tags="linux, screen" ctime="20190326130444" dir="1553594684glup1hdwqg" file="text.html"/>
+      <record id="15535947304ovpwgcmav" name="Расшарить Папку по HTTP с помощью Python" author="" url="https://xakinfo.ru/2019/01/python-http-server/" tags="linux, python, http" ctime="20190326130530" dir="1553594730lf8clhl0r0" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1551034204o0zevjis9p" name="Разработка и программинг">
