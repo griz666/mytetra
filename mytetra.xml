@@ -10,7 +10,6 @@
      <record id="1542541556x2b7vw4iyo" name="Как настроить автояркость и откалибровать датчик приближения у Xiaomi Redmi 4A и Redmi 3S" author="" url="http://xiaomi-cafe.ru/2018/05/27/adoptable-storage-xiaomi-adoptable-storage/" tags="android, датчик освещенности" ctime="20181118144556" dir="1542541556ydwsid83w1" file="text.html"/>
      <record id="1542541611kti4whf0s5" name="Adoptable storage – объединение в один логический раздел внутренней и внешней памяти" author="" url="http://xiaomi-cafe.ru/2018/05/27/adoptable-storage-xiaomi-adoptable-storage/" tags="android, adoptable storage" ctime="20181118144651" dir="154254161154rgsmsw4q" file="text.html"/>
      <record id="1551082291stetew9c9f" name="Tasker. Форум на 2pda" author="" url="https://4pda.ru/forum/index.php?showtopic=173935" tags="android" ctime="20190225111131" dir="1551082291muqr2ms82p" file="text.html"/>
-     <record id="15620062485hw5zh42ah" name="Временный root на Xiaomi" author="" url="https://4pda.ru/forum/index.php?showtopic=783994&amp;st=240#entry57407152" tags="Root, Android, Xiaomi" ctime="20190701213728" dir="15620062481b2lwyf3jc" file="text.html"/>
     </recordtable>
    </node>
    <node crypt="0" icon="" id="1542219138spg8cgcbz6" name="Lego Robots">
@@ -92,8 +91,6 @@
       <record id="1553594684p383cfmgrr" name="Screen — несколько экранов в одной SSH сессии" author="" url="https://xakinfo.ru/2018/03/screen-more-ssh-in-one-session/" tags="linux, screen" ctime="20190326130444" dir="1553594684glup1hdwqg" file="text.html"/>
       <record id="15535947304ovpwgcmav" name="Расшарить Папку по HTTP с помощью Python" author="" url="https://xakinfo.ru/2019/01/python-http-server/" tags="linux, python, http" ctime="20190326130530" dir="1553594730lf8clhl0r0" file="text.html"/>
       <record id="1559642824233ceg3job" name="отключение scr_lock при смене раскладки в gnome" author="" url="https://oswaltgottfried.wordpress.com/2018/05/30/%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-scroll-lock-%D0%BF%D1%80%D0%B8-%D1%81%D0%BC%D0%B5%D0%BD%D0%B5-%D1%80%D0%B0%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8/" tags="gnome, scrl_lock" ctime="20190604130704" dir="1559642824o0ttdu0fpn" file="text.html"/>
-      <record id="15621838708lg7z9dzlg" name="Настройка Marble Mouse Trackball. Кратко" author="" url="https://sandalov.org/blog/977/" tags="trackball, linux, xorg" ctime="20190703225750" dir="1562183870f7c1x1qj2s" file="text.html"/>
-      <record id="1562183937duda8y5n9f" name="Настройка Marble Mouse Trackball. Подробно" author="" url="https://help.ubuntu.com/community/Logitech_Marblemouse_USB" tags="trackball, xorg, linux" ctime="20190703225857" dir="1562183937g095sm6o8a" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1551034204o0zevjis9p" name="Разработка и программинг">
@@ -129,6 +126,7 @@
    <node crypt="" id="1553595764px2oerj99p" name="Autocad">
     <recordtable>
      <record id="1553595976cgwwug8b2h" name="убрать рамки во вставок" author="" url="" tags="" ctime="20190326132616" dir="1553595976ky4m3zdmo2" file="text.html"/>
+     <record id="15627516297pkun4uyxy" name="Толковый сайт по автокаду. Палитры блоков" author="" url="https://autocad-specialist.ru/skachat.html" tags="autocad" ctime="20190710124029" dir="1562751629hark2oeu6q" file="text.html"/>
     </recordtable>
    </node>
    <node crypt="" id="15582564427xzvkajktq" name="JavaScript">
