@@ -46,6 +46,7 @@
       <record id="1556015275g4d9ztmij5" name="Как зайти по внешнему IP-адресу из локальной сети для MikroTik" author="" url="https://lantorg.com/article/kak-zajti-po-vneshnemu-ip-adresu-iz-lokalnoj-seti-dlya-mikrotik" tags="mikrotik, nat, firewall" ctime="20190423132755" dir="1556015275b3bbbi56vt" file="text.html"/>
       <record id="1565639998pes0tb1e77" name="Mikrotik: маленькая хитрость switch chip (для IPTV)" author="" url="https://habr.com/ru/post/313702/" tags="IPTV, Mikrotik" ctime="20190812225958" dir="1565639998837r09znkj" file="text.html"/>
       <record id="1565642236cdrxzeeslo" name="Про смену IMEI" author="" url="https://forum.nag.ru/index.php?/topic/145567-mikrotik-sxt-lte-kit-smena-imei/" tags="Mikrotik, IMEI" ctime="20190812233716" dir="1565642236ks7toa2vac" file="text.html"/>
+      <record id="1565642970w8v3lqpqwa" name="Полезные ссылки" author="" url="" tags="Mikrotik" ctime="20190812234930" dir="1565642970b4ldwhp56l" file="text.html"/>
      </recordtable>
      <node crypt="" id="155074283153srpdwuvz" name="Цикл по настройке 8 статей">
       <recordtable>
@@ -68,6 +69,7 @@
       <record id="1550230850o4w91os1x0" name="Реальная скорость Wi-Fi (на предприятиях)" author="" url="https://habr.com/ru/post/431404/" tags="WiFi, теория" ctime="20190215150512" dir="1550230850s4bwd6nc8k" file="text.html"/>
       <record id="1550232264kht0u0kw5z" name="Почему Wi-Fi не будет работать, как планировалось, и зачем знать, каким телефоном пользуется сотрудник " author="" url="https://habr.com/ru/company/comptek/blog/427575/" tags="WiFi, теория" ctime="20190215150514" dir="15502322642kyxezkshi" file="text.html"/>
       <record id="1550492512gig1h7is88" name="Wi-Fi: неочевидные нюансы" author="" url="https://habr.com/ru/post/149447/" tags="WiFi" ctime="20190218152152" dir="1550492512fgrsfxbwr4" file="text.html"/>
+      <record id="1565642784nz2bwv98gr" name="Юстировка моста" author="" url="https://forum.nag.ru/index.php?/topic/149193-sxt-lite-5-detalnaya-nastroyka/&amp;do=findComment&amp;comment=1545830" tags="WiFi" ctime="20190812234624" dir="15656427844yb6gxbeb4" file="text.html"/>
      </recordtable>
     </node>
    </node>
