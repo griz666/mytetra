@@ -45,6 +45,7 @@
       <record id="1552077444tesef9x8km" name="Настройка OpenVPN сервера и клиента на Mikrotik " author="" url="https://wifisystem.ru/docs/mikrotik/openvpn-server-mikrotik/#vpnserver" tags="mikrotik, openvpn" ctime="20190308233724" dir="1552077444cqx7mzg2wo" file="text.html"/>
       <record id="1556015275g4d9ztmij5" name="Как зайти по внешнему IP-адресу из локальной сети для MikroTik" author="" url="https://lantorg.com/article/kak-zajti-po-vneshnemu-ip-adresu-iz-lokalnoj-seti-dlya-mikrotik" tags="mikrotik, nat, firewall" ctime="20190423132755" dir="1556015275b3bbbi56vt" file="text.html"/>
       <record id="1565639998pes0tb1e77" name="Mikrotik: маленькая хитрость switch chip (для IPTV)" author="" url="https://habr.com/ru/post/313702/" tags="IPTV, Mikrotik" ctime="20190812225958" dir="1565639998837r09znkj" file="text.html"/>
+      <record id="1565642236cdrxzeeslo" name="Про смену IMEI" author="" url="https://forum.nag.ru/index.php?/topic/145567-mikrotik-sxt-lte-kit-smena-imei/" tags="Mikrotik, IMEI" ctime="20190812233716" dir="1565642236ks7toa2vac" file="text.html"/>
      </recordtable>
      <node crypt="" id="155074283153srpdwuvz" name="Цикл по настройке 8 статей">
       <recordtable>
