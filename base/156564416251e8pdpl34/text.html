@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head><meta name="qrichtext" content="1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'DejaVu Sans'; font-size:11pt; font-weight:400; font-style:normal;">
+<p style=" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:xx-large; font-weight:600;">Настройка Hairpin NAT на RouterOS (Mikrotik)</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Написано автором<a href="https://ixnfo.com/author/admin"><span style=" text-decoration: underline; color:#0000ff;">Vyacheslav</span></a> <a name="b"></a><a href="https://ixnfo.com/hairpin-nat-routeros-mikrotik.html"><span style=" text-decoration: underline; color:#0000ff;">2</span></a><span style=" text-decoration: underline; color:#0000ff;">6.02.2019</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="https://ixnfo.com/hairpin-nat-routeros-mikrotik.html#respond"><span style=" text-decoration: underline; color:#0000ff;">Оставьте комментарий к Настройка Hairpin NAT на RouterOS (Mikrotik)</span></a> </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="ixnfo-1840340452"></a>В этой статье я приведу пример настройки Hairpin NAT на RouterOS (Mikrotik). </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Бываю случаи когда в локальной сети находится например сервер или видеорегистратор, порты к которому проброшены в фаерволе, но подключиться можно только из других сетей, а из локальной сети получается только по локальному IP адресу, но не по внешнему, что на WAN интерфейсе маршрутизатора.</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="ixnfo-682790037"></a>Допустим WAN IP адрес маршрутизатора — 1.1.1.1, LAN — 192.168.88.1, IP адрес сервера — 192.168.88.254. </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Допустим есть стандартное NAT правило (оставим его): </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="highlighter_662122"></a>1</p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace';">ip firewall nat add action=masquerade chain=srcnat comment=&quot;defconf: masquerade&quot; out-interface=ether1</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Теперь настроим «Hairpin NAT» (пробросим порт 22 для SSH): </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="highlighter_37404"></a>1</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2</p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace';">ip firewall nat add action=dst-nat chain=dstnat dst-address=1.1.1.1 dst-port=22 protocol=tcp to-addresses=192.168.88.254</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace';">ip firewall nat add action=masquerade chain=srcnat dst-address=192.168.88.254 dst-port=22 out-interface=bridge protocol=tcp src-address=192.168.88.0/24</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Готово. </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-style:italic;">Смотрите также мою статью:</span><br /><a href="https://ixnfo.com/probros-portov-na-marshrutizatorah-mikrotik.html"><span style=" text-decoration: underline; color:#0000ff;">Проброс портов на маршрутизаторах Mikrotik</span></a><br /><a href="https://ixnfo.com/nastroyka-udalennogo-dostupa-v-marshrutizatorah-mikrotik.html"><span style=" text-decoration: underline; color:#0000ff;">Настройка удаленного доступа в маршрутизаторах Mikrotik</span></a></p></body></html>

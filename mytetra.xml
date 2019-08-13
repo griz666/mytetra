@@ -47,6 +47,8 @@
       <record id="1565639998pes0tb1e77" name="Mikrotik: маленькая хитрость switch chip (для IPTV)" author="" url="https://habr.com/ru/post/313702/" tags="IPTV, Mikrotik" ctime="20190812225958" dir="1565639998837r09znkj" file="text.html"/>
       <record id="1565642236cdrxzeeslo" name="Про смену IMEI" author="" url="https://forum.nag.ru/index.php?/topic/145567-mikrotik-sxt-lte-kit-smena-imei/" tags="Mikrotik, IMEI" ctime="20190812233716" dir="1565642236ks7toa2vac" file="text.html"/>
       <record id="1565642970w8v3lqpqwa" name="Полезные ссылки" author="" url="" tags="Mikrotik" ctime="20190812234930" dir="1565642970b4ldwhp56l" file="text.html"/>
+      <record id="1565644091tanoyhwazr" name="Настройка удаленного доступа в маршрутизаторах Mikrotik" author="" url="https://ixnfo.com/nastroyka-udalennogo-dostupa-v-marshrutizatorah-mikrotik.html" tags="mikrotik, firewall" ctime="20190813000811" dir="1565644091j242sgz2z2" file="text.html"/>
+      <record id="1565644162s9rrwlf7j1" name="Настройка Hairpin NAT на RouterOS (Mikrotik)" author="" url="https://ixnfo.com/hairpin-nat-routeros-mikrotik.html" tags="Mikrotik, Firewall" ctime="20190813000922" dir="156564416251e8pdpl34" file="text.html"/>
      </recordtable>
      <node crypt="" id="155074283153srpdwuvz" name="Цикл по настройке 8 статей">
       <recordtable>

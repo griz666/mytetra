@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head><meta name="qrichtext" content="1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'DejaVu Sans'; font-size:11pt; font-weight:400; font-style:normal;">
+<p style=" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:xx-large; font-weight:600;">Настройка удаленного доступа в маршрутизаторах Mikrotik</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Написано автором<a href="https://ixnfo.com/author/admin"><span style=" text-decoration: underline; color:#0000ff;">Vyacheslav</span></a> <a name="b"></a><a href="https://ixnfo.com/nastroyka-udalennogo-dostupa-v-marshrutizatorah-mikrotik.html"><span style=" text-decoration: underline; color:#0000ff;">0</span></a><span style=" text-decoration: underline; color:#0000ff;">1.11.2013</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a href="https://ixnfo.com/nastroyka-udalennogo-dostupa-v-marshrutizatorah-mikrotik.html#comments"><span style=" text-decoration: underline; color:#0000ff;">9 комментариев к записи Настройка удаленного доступа в маршрутизаторах Mikrotik</span></a> </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="ixnfo-1528677179"></a>Открыть <span style=" font-weight:600;">«IP»</span> — «<span style=" font-weight:600;">Firewall»</span> — вкладку «<span style=" font-weight:600;">Filter Rules»</span>.<br />Нажать «<span style=" font-weight:600;">Add new</span>» для добавления нового правила. </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Далее установить следующие параметры:</p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="ixnfo-499151086"></a><span style=" font-weight:600;">C</span><span style=" font-weight:600;">hain:</span><span style=" font-style:italic;"> input</span><br /><span style=" font-weight:600;">Src. Address:</span> тут можно указать IP адрес или сеть с которой разрешено подключаться, если разрешено всем, то не указываем.<br /><span style=" font-weight:600;">Protocol:</span> tcp<br /><span style=" font-weight:600;">Dst. Port:</span> 80 (или 8291 для Winbox, 21 для ftp, 22 для ssh, 23 для telnet, udp 161 для snmp)<br /><span style=" font-weight:600;">Action:</span> accept </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Нажать «<span style=" font-weight:600;">ОК</span>» для добавления правила. </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">После этого в фаерволе, в конце списка будет создано правило. Так как оно будет последним, а перед ним стоит правило запрещающее все, то его необходимо перетянуть мышкой в самый верх, иначе от него не будет толку. </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Через командную строку правила будут выглядеть следующим образом: </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="highlighter_893358"></a>1</p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace';">/ip firewall filter add chain=input protocol=tcp dst-port=80 disabled=no action=accept</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Поднять вверх списка можно так (где 30 — ID добавленного правила): </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="highlighter_513475"></a>1</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2</p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace';">/ip firewall filter print</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace';">/ip firewall filter move 30 destination=1</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Либо в самой команде укажем что нужно расположить правило в самом начале списка: </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="highlighter_8085"></a>1</p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace';">/ip firewall filter add chain=input protocol=tcp dst-port=80 disabled=no action=accept place-before 0</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Также в меню «<span style=" font-weight:600;">IP» — «Services»</span> в параметрах нужной службы можно добавить в <span style=" font-weight:600;">«Available From»</span> список IP адресов или сетей с которых необходимо разрешить доступ. Доступ ограничивается как для локальных так и внешних адресов, поэтому в первую очередь нужно добавить IP или сеть с которой вы в данный момент подключены. </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Приведу пример указания IP адреса через терминал, например для telnet (аналогично ftp,www,ssh,winbox): </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<table border="0" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><a name="highlighter_963291"></a>1</p></td>
+<td>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'monospace';">/ip service set telnet address=192.168.88.0/24,172.16.205.50/32,192.168.3.24/32</span></p></td></tr></table>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-style:italic;">Смотрите также мою статью:</span><br /><a href="https://ixnfo.com/hairpin-nat-routeros-mikrotik.html"><span style=" text-decoration: underline; color:#0000ff;">Настройка Hairpin NAT на RouterOS (Mikrotik)</span></a></p></body></html>
