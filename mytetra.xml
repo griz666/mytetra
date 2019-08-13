@@ -32,6 +32,7 @@
    <node crypt="" id="1542220017agbxk14c3z" name="Сети">
     <recordtable>
      <record id="1551802822dy7ejwwsgu" name="Прошивка Linksys EA2700 на DD-WRT" author="" url="https://forum.dd-wrt.com/phpBB2/viewtopic.php?p=902147" tags="" ctime="20190305192022" dir="1551802822jx4w2q9lyi" file="text.html"/>
+     <record id="1565730470d9oil03y71" name="Адреса NTP серверов" author="" url="https://www.ntp-servers.net/servers.html" tags="NTP" ctime="20190814000750" dir="1565730470ga74mgd7r6" file="text.html"/>
     </recordtable>
     <node crypt="" id="1542220025d6vjz0jfu6" name="Mikrotik">
      <recordtable>
