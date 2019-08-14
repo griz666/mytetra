@@ -50,6 +50,8 @@
       <record id="1565642970w8v3lqpqwa" name="Полезные ссылки" author="" url="" tags="Mikrotik" ctime="20190812234930" dir="1565642970b4ldwhp56l" file="text.html"/>
       <record id="1565644091tanoyhwazr" name="Настройка удаленного доступа в маршрутизаторах Mikrotik" author="" url="https://ixnfo.com/nastroyka-udalennogo-dostupa-v-marshrutizatorah-mikrotik.html" tags="mikrotik, firewall" ctime="20190813000811" dir="1565644091j242sgz2z2" file="text.html"/>
       <record id="1565644162s9rrwlf7j1" name="Настройка Hairpin NAT на RouterOS (Mikrotik)" author="" url="https://ixnfo.com/hairpin-nat-routeros-mikrotik.html" tags="Mikrotik, Firewall" ctime="20190813000922" dir="156564416251e8pdpl34" file="text.html"/>
+      <record id="1565810550xkoa7n1c42" name="Обзор и настройка модема Mikrotik R11e-LTE " author="" url="https://2keep.net/mikrotik-r11e-lte/" tags="Mikrotik, LTE" ctime="20190814222230" dir="1565810550bpdos5mcmz" file="text.html"/>
+      <record id="1565810678za8gtmn26g" name="Подводные камни настройки Mikrotik SXT LTE" author="" url="https://habr.com/ru/post/336076/" tags="Mikrotik, LTE" ctime="20190814222438" dir="1565810678yyceepxykq" file="text.html"/>
      </recordtable>
      <node crypt="" id="155074283153srpdwuvz" name="Цикл по настройке 8 статей">
       <recordtable>
