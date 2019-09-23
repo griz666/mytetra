@@ -100,6 +100,8 @@
       <record id="1553594684p383cfmgrr" name="Screen — несколько экранов в одной SSH сессии" author="" url="https://xakinfo.ru/2018/03/screen-more-ssh-in-one-session/" tags="linux, screen" ctime="20190326130444" dir="1553594684glup1hdwqg" file="text.html"/>
       <record id="15535947304ovpwgcmav" name="Расшарить Папку по HTTP с помощью Python" author="" url="https://xakinfo.ru/2019/01/python-http-server/" tags="linux, python, http" ctime="20190326130530" dir="1553594730lf8clhl0r0" file="text.html"/>
       <record id="1559642824233ceg3job" name="отключение scr_lock при смене раскладки в gnome" author="" url="https://oswaltgottfried.wordpress.com/2018/05/30/%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-scroll-lock-%D0%BF%D1%80%D0%B8-%D1%81%D0%BC%D0%B5%D0%BD%D0%B5-%D1%80%D0%B0%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8/" tags="gnome, scrl_lock" ctime="20190604130704" dir="1559642824o0ttdu0fpn" file="text.html"/>
+      <record id="1568644206ryvu4zhzuv" name="Интересная возможность присваивать имена OpenVPN интерфейсам" author="" url="" tags="OpenVPN" ctime="20190916173006" dir="1568644206u8p6czeigw" file="text.html"/>
+      <record id="1568648175s9txe9nglr" name="iptables и динамические правила (keep state) " author="" url="https://skeletor.org.ua/?p=1719" tags="IPTABLES" ctime="20190916183615" dir="15686481753u5alkcwl3" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1551034204o0zevjis9p" name="Разработка и программинг">
