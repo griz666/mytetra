@@ -110,6 +110,7 @@
       <record id="1568648175s9txe9nglr" name="iptables и динамические правила (keep state) " author="" url="https://skeletor.org.ua/?p=1719" tags="IPTABLES" ctime="20190916183615" dir="15686481753u5alkcwl3" file="text.html"/>
       <record id="15707989845oz47ql27b" name="&#10;Автоматизация создания timelapse с камеры видеонаблюдения с помощью ffmpeg" author="" url="http://coding.dp.ua/raznoe/2052-avtomatizatsiya-sozdaniya-timelapse-s-kameryi-videonablyudeniya-s-pomoshhyu-ffmpeg.html" tags="ffmpeg, видеонаблюдение" ctime="20191011160304" dir="1570798984yijz22mqxw" file="text.html"/>
       <record id="157103789140grrvi0w9" name="Удивительно полезный инструмент: lsof" author="" url="https://habr.com/ru/company/ruvds/blog/337934/" tags="linux, lsof, инструменты" ctime="20191014102451" dir="1571037891kpo9wya63l" file="text.html"/>
+      <record id="1576790557fyw7n3yguy" name="OpenVPN изоляция пользователей" author="" url="https://serverfault.com/questions/736274/openvpn-client-to-client" tags="linux, iptables, openvpn, настройка" ctime="20191220002237" dir="15767905571r3u7stggh" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1551034204o0zevjis9p" name="Разработка и программинг">
