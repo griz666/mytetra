@@ -88,6 +88,7 @@
       <record id="1542260914i2a99jhj4h" name="Не загружается из за случайных чисел" author="" url="http://liberatum.ru/e/dev-random-urandom-haveged" tags="Linux, энтропия, загрузка, проблема" ctime="20181115104104" dir="154226091447jbo6tzw3" file="text.html"/>
       <record id="1569092772mjhlqiv4vn" name="Копирование проблемных и нечитаемых файлов rsync" author="" url="https://askentire.net/q/luchshii-sposob-skopirovat-vse-fai-ly-ignoriruya-oshibki-59886171662" tags="rsync" ctime="20190921220612" dir="15690927720dhxdwammw" file="text.html"/>
       <record id="1576569955f8vv6tguuu" name="Установка человеческой Java/JDK" author="" url="https://debian.pro/977" tags="Linux, Java" ctime="20191217110555" dir="1576569955bkibxkj5no" file="text.html"/>
+      <record id="1578174366ufuljz7qy7" name="настройка logitech marblemouse" author="" url="" tags="marblemouse, evdev" ctime="20200105004606" dir="1578174366egeboveeye" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="15424864394lsj8rldmy" name="Пакеты">
