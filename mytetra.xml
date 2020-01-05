@@ -89,6 +89,7 @@
       <record id="1569092772mjhlqiv4vn" name="Копирование проблемных и нечитаемых файлов rsync" author="" url="https://askentire.net/q/luchshii-sposob-skopirovat-vse-fai-ly-ignoriruya-oshibki-59886171662" tags="rsync" ctime="20190921220612" dir="15690927720dhxdwammw" file="text.html"/>
       <record id="1576569955f8vv6tguuu" name="Установка человеческой Java/JDK" author="" url="https://debian.pro/977" tags="Linux, Java" ctime="20191217110555" dir="1576569955bkibxkj5no" file="text.html"/>
       <record id="1578174366ufuljz7qy7" name="настройка logitech marblemouse" author="" url="" tags="marblemouse, evdev" ctime="20200105004606" dir="1578174366egeboveeye" file="text.html"/>
+      <record id="1578214891pfq9bseewm" name="Особенность монтирования через Systemd" author="" url="https://unix.stackexchange.com/questions/283442/systemd-mount-fails-where-setting-doesnt-match-unit-name" tags="systemd, mount" ctime="20200105120131" dir="1578214891z1irt3a7lu" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="15424864394lsj8rldmy" name="Пакеты">
