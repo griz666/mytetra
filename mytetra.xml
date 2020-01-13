@@ -91,6 +91,7 @@
       <record id="1578174366ufuljz7qy7" name="настройка logitech marblemouse" author="" url="" tags="marblemouse, evdev" ctime="20200105004606" dir="1578174366egeboveeye" file="text.html"/>
       <record id="1578214891pfq9bseewm" name="Особенность монтирования через Systemd" author="" url="https://unix.stackexchange.com/questions/283442/systemd-mount-fails-where-setting-doesnt-match-unit-name" tags="systemd, mount" ctime="20200105120131" dir="1578214891z1irt3a7lu" file="text.html"/>
       <record id="1578780269ovu9mhqr3k" name="не очевидная настройка WOL" author="" url="https://serveradmin.ru/ne-rabotaet-wake-on-lan-v-linux-kak-nastroit/" tags="magic packet, wol" ctime="20200112010429" dir="157878026964cs98ecaz" file="text.html"/>
+      <record id="1578930510zc1vwues8b" name="Настройка route при поднятии vpn интрфейса" author="" url="" tags="openvpn, route" ctime="20200113184830" dir="1578930510ulmwehcy8k" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="15424864394lsj8rldmy" name="Пакеты">
