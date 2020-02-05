@@ -56,6 +56,7 @@
       <record id="15720102373bu6erf4rx" name="Настраиваем IPTV на роутере Mikrotik" author="" url="https://pikabu.ru/story/nastraivaem_iptv_na_routere_mikrotik_6538740" tags="IPTV, MIKROTIK" ctime="20191025163037" dir="1572010237gle81abilu" file="text.html"/>
       <record id="1572940911a3euezbsoq" name="Мультиван и маршрутизация на Mikrotik RouterOS " author="" url="https://habr.com/ru/post/463813/" tags="Mikrotik, RouterOS, настройка" ctime="20191105110151" dir="1572940911r3pht2otpo" file="text.html"/>
       <record id="1574763763r0w4fxx301" name="Гайд по Mikrotik RoMON " author="" url="https://habr.com/ru/post/419149/" tags="Mikrotik, RoMoN" ctime="20191126132243" dir="1574763763w0w2e2wzd7" file="text.html"/>
+      <record id="1580902859y1lp6hkmiz" name="DHCP Classless Route (раздача статических маршрутов)" author="" url="https://habr.com/ru/post/239141/" tags="mikrotik, DHCP, route" ctime="20200205144059" dir="15809028590btc3f8b3i" file="text.html"/>
      </recordtable>
      <node crypt="" id="155074283153srpdwuvz" name="Цикл по настройке 8 статей">
       <recordtable>
