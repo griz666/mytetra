@@ -94,6 +94,7 @@
       <record id="1578780269ovu9mhqr3k" name="не очевидная настройка WOL" author="" url="https://serveradmin.ru/ne-rabotaet-wake-on-lan-v-linux-kak-nastroit/" tags="magic packet, wol" ctime="20200112010429" dir="157878026964cs98ecaz" file="text.html"/>
       <record id="1578930510zc1vwues8b" name="Настройка route при поднятии vpn интрфейса" author="" url="" tags="openvpn, route" ctime="20200113184830" dir="1578930510ulmwehcy8k" file="text.html"/>
       <record id="1579381789pcrgd215gf" name="Создание сетевого моста" author="" url="https://www.linuxliteos.com/forums/network/using-network-manager-gnome-to-bridge-eth0-and-wlan0/" tags="linux, bridge" ctime="20200119000949" dir="1579381789ira5uzael0" file="text.html"/>
+      <record id="15822738778z4sar68vg" name="автологин и запуск startx on boot" author="" url="https://forums.bunsenlabs.org/viewtopic.php?id=5544" tags="startx, autologin" ctime="20200221113117" dir="1582273877hi04dwizjl" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="15424864394lsj8rldmy" name="Пакеты">
