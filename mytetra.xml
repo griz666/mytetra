@@ -128,6 +128,7 @@
     <node crypt="" id="1551034204o0zevjis9p" name="Разработка и программинг">
      <recordtable>
       <record id="1551034248hrz1cksx2s" name="Ajenti documentation" author="" url="http://docs1.ajenti.org/en/latest/index.html" tags="ajenti" ctime="20190224215048" dir="1551034248yfudtpxsym" file="text.html"/>
+      <record id="1582896980jcpgns67sw" name="If в Bash: от новичка до профессионала" author="" url="https://techrocks.ru/2019/01/21/bash-if-statements-tips/" tags="BASH, if-then, скрпты" ctime="20200228163620" dir="1582896980v0tqyae78e" file="text.html"/>
      </recordtable>
     </node>
    </node>
