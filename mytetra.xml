@@ -124,6 +124,8 @@
       <record id="1580141509c9xr8fd20b" name="Проброс фаловых систем из хоста в linux-гостя в KVM" author="" url="https://askubuntu.com/questions/1014674/using-file-system-passthrough-with-kvm-guests" tags="kvm, mount" ctime="20200127191149" dir="1580141509qdca9r5m1f" file="text.html"/>
       <record id="1580675748gojilp0937" name="Проверка скорости открытия сайта в консоле" author="" url="http://itisgood.ru/2018/07/11/kak-protestirovat-skorost-zagruzki-sajta-v-terminale-linux/" tags="curl" ctime="20200202233548" dir="1580675748jonswkx8ws" file="text.html"/>
       <record id="15832329460dlzhdf1fj" name="Что такое ПРАВИЛЬНЫЙ способ исправления ключевых кадров в FFMPEG для DASH?" author="" url="https://ubuntugeeks.com/questions/367103/what-is-the-correct-way-to-fix-keyframes-in-ffmpeg-for-dash" tags="ffmpeg" ctime="20200303135546" dir="1583232946imedf5gof3" file="text.html"/>
+      <record id="1583234827vvq71giivc" name="Force FFMPEG to use TCP protocol when reading a RTSP Stream" author="" url="https://stackoverflow.com/questions/23238295/force-ffmpeg-to-use-tcp-protocol-when-reading-a-rtsp-stream" tags="ffmpeg" ctime="20200303142707" dir="158323482726d8vyb41p" file="text.html"/>
+      <record id="1583235006ujvkatncth" name="Improve quality of ffmpeg created jpgs" author="" url="https://superuser.com/questions/318845/improve-quality-of-ffmpeg-created-jpgs" tags="ffmpeg, jpeg" ctime="20200303143006" dir="15832350061r8rzp7h82" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1551034204o0zevjis9p" name="Разработка и программинг">
