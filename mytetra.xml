@@ -131,6 +131,7 @@
       <record id="1582896980jcpgns67sw" name="If в Bash: от новичка до профессионала" author="" url="https://techrocks.ru/2019/01/21/bash-if-statements-tips/" tags="BASH, if-then, скрпты" ctime="20200228163620" dir="1582896980v0tqyae78e" file="text.html"/>
       <record id="1582897232b7ts45jo9b" name="Как получить вчерашнюю дату?" author="" url="" tags="" ctime="20200228164032" dir="1582897232qsjfrj132g" file="text.html"/>
       <record id="1583140754uvwr4yvail" name="Удаленное выключение компьютера через MajorDoMo" author="" url="https://www.ekzorchik.ru/2017/11/remote-shutdown-of-the-computer-through-majordomo/" tags="WOL, RPC, Windows" ctime="20200302121914" dir="1583140754z0kt5rw83f" file="text.html"/>
+      <record id="1583231959hkxirh0cwt" name="Прячем Bash скрипты" author="" url="https://habr.com/ru/post/139666/" tags="bash, компиляция" ctime="20200303133919" dir="1583231959gw0bvw6k69" file="text.html"/>
      </recordtable>
     </node>
    </node>
