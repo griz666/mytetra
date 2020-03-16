@@ -135,6 +135,7 @@
       <record id="1582897232b7ts45jo9b" name="Как получить вчерашнюю дату?" author="" url="" tags="" ctime="20200228164032" dir="1582897232qsjfrj132g" file="text.html"/>
       <record id="1583140754uvwr4yvail" name="Удаленное выключение компьютера через MajorDoMo" author="" url="https://www.ekzorchik.ru/2017/11/remote-shutdown-of-the-computer-through-majordomo/" tags="WOL, RPC, Windows" ctime="20200302121914" dir="1583140754z0kt5rw83f" file="text.html"/>
       <record id="1583231959hkxirh0cwt" name="Прячем Bash скрипты" author="" url="https://habr.com/ru/post/139666/" tags="bash, компиляция" ctime="20200303133919" dir="1583231959gw0bvw6k69" file="text.html"/>
+      <record id="1584368191oavagqp7pj" name="Настройка автоматической архивации лог файлов с помощью logrotate" author="" url="https://linux-admins.ru/article.php?id_article=47&amp;article_title=%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0+%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9+%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D0%B0%D1%86%D0%B8%D0%B8+%D0%BB%D0%BE%D0%B3+%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2+%D1%81+%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E+logrotate" tags="logrotate, logfile" ctime="20200316171631" dir="1584368191uax82lrrgy" file="text.html"/>
      </recordtable>
     </node>
    </node>
