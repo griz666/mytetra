@@ -192,6 +192,13 @@
      <record id="1580460249s5k81pj3al" name="Сброс SONOS" author="" url="" tags="" ctime="20200131114409" dir="1580460249bw2zehjvix" file="text.html"/>
     </recordtable>
    </node>
+   <node crypt="" id="1606314125ufarikib4h" name="Автоматизация">
+    <node crypt="" id="16063141323wihityasi" name="Openhub">
+     <recordtable>
+      <record id="1606314181o0r593ihu3" name="Управление реле Лоран через систему автоматизации умного дома OpenHab " author="" url="http://pavel-pyatovsky.blogspot.com/2017/01/openhab.html" tags="openhub, laurent" ctime="20201125172301" dir="1606314181hr6uz06rbd" file="text.html"/>
+     </recordtable>
+    </node>
+   </node>
   </node>
   <node crypt="1" icon="" id="1542286006yvalbpm627" name="UkM1U0lNUAMjRaJ4u2OLGqKHY0pUE6UnWNXWzy9dTRF4DHnUeSDTlX62HdPnDSjh6D1lJ6k8PY+L82AL9IbAcvmsAV8iaDL58UD8tcq4DZo=">
    <recordtable>
