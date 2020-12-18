@@ -168,6 +168,7 @@
    <node crypt="" id="1550486247orcjha5yhe" name="Разное про ПК">
     <recordtable>
      <record id="1550486315tx1cfwy1q3" name="Использование телевизора как монитора, через wifi " author="" url="https://arxont.blogspot.com/2015/01/wifi-gemoroi-edition.html" tags="ТВ, WiFi" ctime="20190218133835" dir="1550486315b1qxbbuseu" file="text.html"/>
+     <record id="16082808527iugsqfyod" name="Мониторинг APC UPS HS500" author="" url="http://www.bog.pp.ru/hard/UPS.html#apcbackupshs" tags="APC, zabbiz, ИБП" ctime="20201218114052" dir="1608280852al5266da10" file="text.html"/>
     </recordtable>
    </node>
    <node crypt="" id="1553595764px2oerj99p" name="Autocad">
