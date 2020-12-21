@@ -100,6 +100,7 @@
       <record id="1599555557qhnschluoa" name="Raspbian - Переимепонвание сетевых интерфейсов" author="" url="https://sprosi.pro/questions/137662/hardware-issue-pereimenovanie-rpi3-eth0-v-eth1" tags="" ctime="20200908115917" dir="1599555557kf89tong33" file="text.html"/>
       <record id="1605457225bdutg4edab" name="Убрать гашение монитора бех иксов" author="" url="" tags="" ctime="20201115192025" dir="1605457225b3yqcwkcp9" file="text.html"/>
       <record id="16078463050stpc5j9qe" name="создание сетевого моста средствами nmcli" author="" url="https://www.cyberciti.biz/faq/how-to-add-network-bridge-with-nmcli-networkmanager-on-linux/" tags="" ctime="20201213105825" dir="1607846305t6m00ghp8z" file="text.html"/>
+      <record id="1608582105prtzi573ww" name="Видеокарта не дает динамически управлять охлаждением" author="" url="" tags="sleep, systemd, amdgpu" ctime="20201221232145" dir="1608582105xpgdt9s4ez" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="15424864394lsj8rldmy" name="Пакеты">
