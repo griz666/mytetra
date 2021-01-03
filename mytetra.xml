@@ -204,6 +204,7 @@
     <node crypt="" id="1609675592zlpgrs76lb" name="esp8622">
      <recordtable>
       <record id="1609680400mvecuze0pj" name="Документация по espEasy" author="" url="" tags="" ctime="20210103162640" dir="16096804008m9y9fpnjm" file="text.html"/>
+      <record id="1609682548q3bwzu8a88" name="Подключение кнопки на ESP8266. Подтяжка уровней" author="" url="https://zen.yandex.ru/media/id/5f57de8cccc2347a76f12328/podkliuchenie-knopki-na-esp8266-5f9851dc5142496dd199a680" tags="esp8622" ctime="20210103170228" dir="1609682548nfw97huhiz" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1609680432xt5p4wwfgi" name="MQTT mosquito">
