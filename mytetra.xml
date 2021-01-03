@@ -209,6 +209,9 @@
       <record id="1609683212578as6n4qk" name="ESPEasy - готовая прошивка для ESP8266. Загрузка и настройка" author="" url="https://robot-on.ru/articles/proshivka-espeasy" tags="" ctime="20210103171332" dir="1609683212cookzl0x59" file="text.html"/>
       <record id="1609683668br83dxq08o" name="Очень большая статься про подключение и прошивку" author="" url="http://www.count-zero.ru/2018/esp8266" tags="esp8622" ctime="20210103172108" dir="16096836686ihrur7xkg" file="text.html"/>
       <record id="1609684069my4717dgt9" name="Распиновки и модели" author="" url="" tags="esp8622" ctime="20210103172749" dir="1609684069986tq0givm" file="text.html"/>
+      <record id="1609684291vdl4yliges" name="Подключение нагрузки 220В к esp8266 " author="" url="" tags="esp8266" ctime="20210103173131" dir="1609684291qz7tg1o6nq" file="text.html"/>
+      <record id="16096844015gcgzzvmai" name="ESP8266 — подключение и обновление прошивки" author="" url="https://esp8266.ru/esp8266-podkluchenie-obnovlenie-proshivki/" tags="esp8266" ctime="20210103173321" dir="1609684401ts1kfjbqlu" file="text.html"/>
+      <record id="16096844635zb9ep3wp7" name="ESP8266 проекты " author="" url="" tags="esp8266" ctime="20210103173423" dir="1609684463jv1vrgamj0" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1609680432xt5p4wwfgi" name="MQTT mosquito">
