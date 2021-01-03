@@ -209,6 +209,7 @@
     <node crypt="" id="1609680432xt5p4wwfgi" name="MQTT mosquito">
      <recordtable>
       <record id="1609680584fgs87gfrcc" name="Установка на дебиан 10" author="" url="https://www.8host.com/blog/ustanovka-brokera-soobshhenij-mosquitto-v-debian-10/" tags="mqtt, openhab, mosquitto" ctime="20210103162944" dir="1609680584ywluu1m79z" file="text.html"/>
+      <record id="1609680656ea7zooe9q6" name="Mosquitto смотреть сообщения" author="" url="" tags="openhab, mqtt, mosquitto" ctime="20210103163056" dir="1609680656v2ga4ebj1g" file="text.html"/>
      </recordtable>
     </node>
    </node>
