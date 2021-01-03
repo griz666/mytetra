@@ -212,6 +212,7 @@
       <record id="1609684291vdl4yliges" name="Подключение нагрузки 220В к esp8266 " author="" url="" tags="esp8266" ctime="20210103173131" dir="1609684291qz7tg1o6nq" file="text.html"/>
       <record id="16096844015gcgzzvmai" name="ESP8266 — подключение и обновление прошивки" author="" url="https://esp8266.ru/esp8266-podkluchenie-obnovlenie-proshivki/" tags="esp8266" ctime="20210103173321" dir="1609684401ts1kfjbqlu" file="text.html"/>
       <record id="16096844635zb9ep3wp7" name="ESP8266 проекты " author="" url="" tags="esp8266" ctime="20210103173423" dir="1609684463jv1vrgamj0" file="text.html"/>
+      <record id="1609684660yy95k9yd7y" name="Arduino, ESP8266 Lua, Raspberry Pi 2 &amp;&amp; OpenHab. Умный дом: азы управления." author="" url="http://forum.amperka.ru/threads/arduino-esp8266-lua-raspberry-pi-2-openhab-%D0%A3%D0%BC%D0%BD%D1%8B%D0%B9-%D0%B4%D0%BE%D0%BC-%D0%B0%D0%B7%D1%8B-%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F.5043/" tags="Arduino, ESP8266 Lua, Raspberry Pi 2, OpenHab" ctime="20210103173740" dir="1609684660miwaah4ifa" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1609680432xt5p4wwfgi" name="MQTT mosquito">
