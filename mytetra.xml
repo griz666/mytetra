@@ -201,7 +201,16 @@
       <record id="1606314181o0r593ihu3" name="Управление реле Лоран через систему автоматизации умного дома OpenHab " author="" url="http://pavel-pyatovsky.blogspot.com/2017/01/openhab.html" tags="openhub, laurent" ctime="20201125172301" dir="1606314181hr6uz06rbd" file="text.html"/>
      </recordtable>
     </node>
-    <node crypt="" id="1609675592zlpgrs76lb" name="esp8622"/>
+    <node crypt="" id="1609675592zlpgrs76lb" name="esp8622">
+     <recordtable>
+      <record id="1609680400mvecuze0pj" name="Документация по espEasy" author="" url="" tags="" ctime="20210103162640" dir="16096804008m9y9fpnjm" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="1609680432xt5p4wwfgi" name="MQTT mosquito">
+     <recordtable>
+      <record id="1609680584fgs87gfrcc" name="Установка на дебиан 10" author="" url="https://www.8host.com/blog/ustanovka-brokera-soobshhenij-mosquitto-v-debian-10/" tags="mqtt, openhab, mosquitto" ctime="20210103162944" dir="1609680584ywluu1m79z" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
   </node>
   <node crypt="1" icon="" id="1542286006yvalbpm627" name="UkM1U0lNUAMjRaJ4u2OLGqKHY0pUE6UnWNXWzy9dTRF4DHnUeSDTlX62HdPnDSjh6D1lJ6k8PY+L82AL9IbAcvmsAV8iaDL58UD8tcq4DZo=">
