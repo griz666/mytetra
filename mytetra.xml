@@ -208,6 +208,7 @@
       <record id="1609683082aljka6gdiz" name="подключение модуля реле esp 8266 Умный дом OPENHAB " author="" url="http://arduino-kid.ru/blog/podklyuchenie-modulya-rele-esp-8266-umnyy-dom-openhab" tags="" ctime="20210103171122" dir="1609683082r3vwv86774" file="text.html"/>
       <record id="1609683212578as6n4qk" name="ESPEasy - готовая прошивка для ESP8266. Загрузка и настройка" author="" url="https://robot-on.ru/articles/proshivka-espeasy" tags="" ctime="20210103171332" dir="1609683212cookzl0x59" file="text.html"/>
       <record id="1609683668br83dxq08o" name="Очень большая статься про подключение и прошивку" author="" url="http://www.count-zero.ru/2018/esp8266" tags="esp8622" ctime="20210103172108" dir="16096836686ihrur7xkg" file="text.html"/>
+      <record id="1609684069my4717dgt9" name="Распиновки и модели" author="" url="" tags="esp8622" ctime="20210103172749" dir="1609684069986tq0givm" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1609680432xt5p4wwfgi" name="MQTT mosquito">
