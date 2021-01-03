@@ -211,6 +211,7 @@
      <recordtable>
       <record id="1609680584fgs87gfrcc" name="Установка на дебиан 10" author="" url="https://www.8host.com/blog/ustanovka-brokera-soobshhenij-mosquitto-v-debian-10/" tags="mqtt, openhab, mosquitto" ctime="20210103162944" dir="1609680584ywluu1m79z" file="text.html"/>
       <record id="1609680656ea7zooe9q6" name="Mosquitto смотреть сообщения" author="" url="" tags="openhab, mqtt, mosquitto" ctime="20210103163056" dir="1609680656v2ga4ebj1g" file="text.html"/>
+      <record id="1609682986dabcf2tdj2" name="Просто о протоколе MQTT в IIoT" author="" url="https://zen.yandex.ru/media/id/5e16ce1278125e00b1ea677e/prosto-o-protokole-mqtt-v-iiot-5e25713ee6e8ef00b2d8938e" tags="" ctime="20210103170946" dir="1609682986eh9najpi0b" file="text.html"/>
      </recordtable>
     </node>
    </node>
