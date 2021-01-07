@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head><meta name="qrichtext" content="1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'DejaVu Sans'; font-size:11pt; font-weight:400; font-style:normal;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1. На хосте выделить диск, разметить, смонтировать.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2. В менеждере виртмашин подключить его как сетевой ресурс.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br />&lt;filesystem type=&quot;mount&quot; accessmode=&quot;mapped&quot;&gt;</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">  &lt;driver type=&quot;path&quot; wrpolicy=&quot;immediate&quot;/&gt;</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">  &lt;source dir=&quot;/media/sql&quot;/&gt;</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">  &lt;target dir=&quot;/media/sql&quot;/&gt;</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">  &lt;alias name=&quot;fs2&quot;/&gt;</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">  &lt;address type=&quot;pci&quot; domain=&quot;0x0000&quot; bus=&quot;0x09&quot; slot=&quot;0x00&quot; function=&quot;0x0&quot;/&gt;</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;/filesystem&gt;</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:60px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">3. в госте создать точку монтирования</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">4. в госте создать юнит на монтирование, запустить, включить в автозагрузку.</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">[Unit]</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Description=KVM shared mount</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Requires=kmod.service</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">After=systemd-modules-load.service systemd-logind.service</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">[Mount]</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">What=/media/sql</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Where=/media/sql</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Type=9p</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Options=trans=virtio</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">ForceUnmount=yes</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">LazyUnmount=yes</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">TimeoutSec=5</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">[Install]</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">RequiredBy=kmod.service</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:80px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Не забыть про имена юнитов. Для точек монтирования должны совпадать с путем монтирования.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p></body></html>

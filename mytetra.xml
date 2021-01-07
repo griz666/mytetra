@@ -134,7 +134,11 @@
       <record id="1583235006ujvkatncth" name="Improve quality of ffmpeg created jpgs" author="" url="https://superuser.com/questions/318845/improve-quality-of-ffmpeg-created-jpgs" tags="ffmpeg, jpeg" ctime="20200303143006" dir="15832350061r8rzp7h82" file="text.html"/>
       <record id="1584688604sqhh1edag1" name="Архивы с кривой кодировкой" author="" url="" tags="" ctime="20200320101644" dir="158468860473p1zdauyo" file="text.html"/>
      </recordtable>
-     <node crypt="" id="16100076068xkh081nrt" name="Виртуализация"/>
+     <node crypt="" id="16100076068xkh081nrt" name="Виртуализация">
+      <recordtable>
+       <record id="1610007834qzu3iw6h3b" name="для QEMU KVM мапинг дисков хоста в гостя. Для linux" author="" url="" tags="QEMU, KVM" ctime="20210107112354" dir="1610007834zp0r076z79" file="text.html"/>
+      </recordtable>
+     </node>
     </node>
     <node crypt="" id="1551034204o0zevjis9p" name="Разработка и программинг">
      <recordtable>
