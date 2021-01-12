@@ -204,6 +204,7 @@
     <node crypt="" id="16063141323wihityasi" name="Openhub">
      <recordtable>
       <record id="1606314181o0r593ihu3" name="Управление реле Лоран через систему автоматизации умного дома OpenHab " author="" url="http://pavel-pyatovsky.blogspot.com/2017/01/openhab.html" tags="openhub, laurent" ctime="20201125172301" dir="1606314181hr6uz06rbd" file="text.html"/>
+      <record id="1610437864ws24x1bvi0" name="OpenHAB2: Экспорт данных в MySQL и построение графиков в HABPanel " author="" url="https://robot-on.ru/articles/openhab-mysql-export-and-habpanel-charts" tags="openhab, mysql" ctime="20210112105104" dir="1610437864i98dt44j0t" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1609675592zlpgrs76lb" name="esp8622">
