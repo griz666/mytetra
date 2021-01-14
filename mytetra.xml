@@ -124,10 +124,6 @@
       <record id="1568644206ryvu4zhzuv" name="Интересная возможность присваивать имена OpenVPN интерфейсам" author="" url="" tags="OpenVPN" ctime="20190916173006" dir="1568644206u8p6czeigw" file="text.html"/>
       <record id="1568648175s9txe9nglr" name="iptables и динамические правила (keep state) " author="" url="https://skeletor.org.ua/?p=1719" tags="IPTABLES" ctime="20190916183615" dir="15686481753u5alkcwl3" file="text.html"/>
       <record id="15707989845oz47ql27b" name="&#10;Автоматизация создания timelapse с камеры видеонаблюдения с помощью ffmpeg" author="" url="http://coding.dp.ua/raznoe/2052-avtomatizatsiya-sozdaniya-timelapse-s-kameryi-videonablyudeniya-s-pomoshhyu-ffmpeg.html" tags="ffmpeg, видеонаблюдение" ctime="20191011160304" dir="1570798984yijz22mqxw" file="text.html"/>
-      <record id="157103789140grrvi0w9" name="Удивительно полезный инструмент: lsof" author="" url="https://habr.com/ru/company/ruvds/blog/337934/" tags="linux, lsof, инструменты" ctime="20191014102451" dir="1571037891kpo9wya63l" file="text.html"/>
-      <record id="1576790557fyw7n3yguy" name="OpenVPN изоляция пользователей" author="" url="https://serverfault.com/questions/736274/openvpn-client-to-client" tags="linux, iptables, openvpn, настройка" ctime="20191220002237" dir="15767905571r3u7stggh" file="text.html"/>
-      <record id="1579445956vhfczm3vv7" name="Ручная миграция машин KVM с одного хоста на другой" author="" url="https://forum.sys-adm.in/t/kvm/3891" tags="KVM" ctime="20200119175916" dir="1579445956t72vimwrlp" file="text.html"/>
-      <record id="1580141509c9xr8fd20b" name="Проброс фаловых систем из хоста в linux-гостя в KVM" author="" url="https://askubuntu.com/questions/1014674/using-file-system-passthrough-with-kvm-guests" tags="kvm, mount" ctime="20200127191149" dir="1580141509qdca9r5m1f" file="text.html"/>
       <record id="1580675748gojilp0937" name="Проверка скорости открытия сайта в консоле" author="" url="http://itisgood.ru/2018/07/11/kak-protestirovat-skorost-zagruzki-sajta-v-terminale-linux/" tags="curl" ctime="20200202233548" dir="1580675748jonswkx8ws" file="text.html"/>
       <record id="15832329460dlzhdf1fj" name="Что такое ПРАВИЛЬНЫЙ способ исправления ключевых кадров в FFMPEG для DASH?" author="" url="https://ubuntugeeks.com/questions/367103/what-is-the-correct-way-to-fix-keyframes-in-ffmpeg-for-dash" tags="ffmpeg" ctime="20200303135546" dir="1583232946imedf5gof3" file="text.html"/>
       <record id="1583234827vvq71giivc" name="Force FFMPEG to use TCP protocol when reading a RTSP Stream" author="" url="https://stackoverflow.com/questions/23238295/force-ffmpeg-to-use-tcp-protocol-when-reading-a-rtsp-stream" tags="ffmpeg" ctime="20200303142707" dir="158323482726d8vyb41p" file="text.html"/>
@@ -137,6 +133,10 @@
      <node crypt="" id="16100076068xkh081nrt" name="Виртуализация">
       <recordtable>
        <record id="1610007834qzu3iw6h3b" name="для QEMU KVM мапинг дисков хоста в гостя. Для linux" author="" url="" tags="QEMU, KVM" ctime="20210107112354" dir="1610007834zp0r076z79" file="text.html"/>
+       <record id="1576790557fyw7n3yguy" name="OpenVPN изоляция пользователей" author="" url="https://serverfault.com/questions/736274/openvpn-client-to-client" tags="linux, iptables, openvpn, настройка" ctime="20210114162226" dir="15767905571r3u7stggh" file="text.html"/>
+       <record id="157103789140grrvi0w9" name="Удивительно полезный инструмент: lsof" author="" url="https://habr.com/ru/company/ruvds/blog/337934/" tags="linux, lsof, инструменты" ctime="20210114162229" dir="1571037891kpo9wya63l" file="text.html"/>
+       <record id="1580141509c9xr8fd20b" name="Проброс фаловых систем из хоста в linux-гостя в KVM" author="" url="https://askubuntu.com/questions/1014674/using-file-system-passthrough-with-kvm-guests" tags="kvm, mount" ctime="20210114162233" dir="1580141509qdca9r5m1f" file="text.html"/>
+       <record id="1579445956vhfczm3vv7" name="Ручная миграция машин KVM с одного хоста на другой" author="" url="https://forum.sys-adm.in/t/kvm/3891" tags="KVM" ctime="20210114162245" dir="1579445956t72vimwrlp" file="text.html"/>
       </recordtable>
      </node>
     </node>
