@@ -231,6 +231,11 @@
       <record id="1609682986dabcf2tdj2" name="Просто о протоколе MQTT в IIoT" author="" url="https://zen.yandex.ru/media/id/5e16ce1278125e00b1ea677e/prosto-o-protokole-mqtt-v-iiot-5e25713ee6e8ef00b2d8938e" tags="" ctime="20210103170946" dir="1609682986eh9najpi0b" file="text.html"/>
      </recordtable>
     </node>
+    <node crypt="" id="16120082600nmyay86y4" name="Мониторинг">
+     <recordtable>
+      <record id="1612008333o6zpg4bx3y" name="Управление influxdb_v2" author="" url="" tags="" ctime="20210130150533" dir="1612008333ii85wy3kkh" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
   </node>
   <node crypt="1" icon="" id="1542286006yvalbpm627" name="UkM1U0lNUAMjRaJ4u2OLGqKHY0pUE6UnWNXWzy9dTRF4DHnUeSDTlX62HdPnDSjh6D1lJ6k8PY+L82AL9IbAcvmsAV8iaDL58UD8tcq4DZo=">
