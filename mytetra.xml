@@ -235,6 +235,7 @@
     <node crypt="" id="16120082600nmyay86y4" name="Мониторинг">
      <recordtable>
       <record id="1612008333o6zpg4bx3y" name="Управление influxdb_v2" author="" url="" tags="" ctime="20210130150533" dir="1612008333ii85wy3kkh" file="text.html"/>
+      <record id="16177272342r7vnmq4zi" name="Настройка NUT (UPS) в Linux" author="" url="https://habr.com/ru/post/443736/" tags="UPS, NUT, ИБП" ctime="20210406194034" dir="1617727234rgtigknjwb" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1616438201ir46ds8zta" name="Настройка в Docker">
