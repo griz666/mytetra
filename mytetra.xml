@@ -130,7 +130,6 @@
       <record id="1583235006ujvkatncth" name="Improve quality of ffmpeg created jpgs" author="" url="https://superuser.com/questions/318845/improve-quality-of-ffmpeg-created-jpgs" tags="ffmpeg, jpeg" ctime="20200303143006" dir="15832350061r8rzp7h82" file="text.html"/>
       <record id="1584688604sqhh1edag1" name="Архивы с кривой кодировкой" author="" url="" tags="" ctime="20200320101644" dir="158468860473p1zdauyo" file="text.html"/>
       <record id="1612714687mcw0o8nt9m" name="копирование файлов rsync" author="" url="" tags="rsync" ctime="20210207191807" dir="1612714687bgutyry5q6" file="text.html"/>
-      <record id="16268907929hw6kz3a5k" name="Настройка сетевого пк" author="" url="" tags="" ctime="20210721210632" dir="162689079288itp8oqrc" file="text.html"/>
      </recordtable>
      <node crypt="" id="16100076068xkh081nrt" name="Виртуализация">
       <recordtable>
@@ -139,6 +138,7 @@
        <record id="157103789140grrvi0w9" name="Удивительно полезный инструмент: lsof" author="" url="https://habr.com/ru/company/ruvds/blog/337934/" tags="linux, lsof, инструменты" ctime="20210114162229" dir="1571037891kpo9wya63l" file="text.html"/>
        <record id="1580141509c9xr8fd20b" name="Проброс фаловых систем из хоста в linux-гостя в KVM" author="" url="https://askubuntu.com/questions/1014674/using-file-system-passthrough-with-kvm-guests" tags="kvm, mount" ctime="20210114162233" dir="1580141509qdca9r5m1f" file="text.html"/>
        <record id="1579445956vhfczm3vv7" name="Ручная миграция машин KVM с одного хоста на другой" author="" url="https://forum.sys-adm.in/t/kvm/3891" tags="KVM" ctime="20210114162245" dir="1579445956t72vimwrlp" file="text.html"/>
+       <record id="16268907929hw6kz3a5k" name="Настройка сетевого пк" author="" url="" tags="" ctime="20210803220558" dir="162689079288itp8oqrc" file="text.html"/>
       </recordtable>
      </node>
     </node>
