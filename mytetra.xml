@@ -203,6 +203,9 @@
     </recordtable>
    </node>
    <node crypt="" id="1606314125ufarikib4h" name="Автоматизация">
+    <recordtable>
+     <record id="1628080417zjmcqnk4m7" name="NodeRed наброски" author="" url="" tags="" ctime="20210804153337" dir="1628080417kpk1v4w4so" file="text.html"/>
+    </recordtable>
     <node crypt="" id="16063141323wihityasi" name="Openhub">
      <recordtable>
       <record id="1606314181o0r593ihu3" name="Управление реле Лоран через систему автоматизации умного дома OpenHab " author="" url="http://pavel-pyatovsky.blogspot.com/2017/01/openhab.html" tags="openhub, laurent" ctime="20201125172301" dir="1606314181hr6uz06rbd" file="text.html"/>
