@@ -206,6 +206,7 @@
     <recordtable>
      <record id="1628080417zjmcqnk4m7" name="NodeRed наброски" author="" url="" tags="" ctime="20210804153337" dir="1628080417kpk1v4w4so" file="text.html"/>
      <record id="1628189730s9niwnw87k" name="&#10;    Производство&#10;&#10;Умный счетчик Меркурий 206. Интегрируем в Node-RED и контролируем качество электрической энергии. " author="" url="https://vladikoms.livejournal.com/147930.html" tags="node-red" ctime="20210805215530" dir="1628189730z8yx65c0cm" file="text.html"/>
+     <record id="162820265308xl417cdr" name="как сделать свет фона для текста" author="" url="https://discourse.nodered.org/t/how-to-change-ui-text-background-color/18854/5" tags="" ctime="20210806013053" dir="1628202653cd0ak9ju1f" file="text.html"/>
     </recordtable>
     <node crypt="" id="16063141323wihityasi" name="Openhub">
      <recordtable>
