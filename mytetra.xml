@@ -74,6 +74,7 @@
       <record id="15522143560k6m97ta67" name="Инструкция по настройке оборудования Ubiquiti линейки AirMax AC " author="" url="http://skladcabel.ru/instrukcija-po-nastrojke-oborudovanija-ubiquiti-linejki-airmax-ac.html" tags="" ctime="20190310133916" dir="155221435627274fod6b" file="text.html"/>
       <record id="1553594840t78r0uo5m5" name="Обновление прошивок. Простое и &quot;со звездочкой&quot;." author="" url="https://asp24.ru/ubiquiti/kak-obnovit-ili-izmenit-proshivku-na-oborudovanii-ubiquiti-unifi/" tags="ubnt, прошивка" ctime="20190326130720" dir="15535948408reaj8u3ar" file="text.html"/>
       <record id="1555510025b481liz9ja" name="Базовые настройки Ubiquiti EdgeOS: настройка NAT и Firewall" author="" url="https://lanmarket.ua/stats/bazovye-nastroyki-Ubiquiti-EdgeOS:-nastroyka-NAT-i-Firewall-" tags="Firewall, edgerouer" ctime="20190417170705" dir="1555510025fr6bt398bk" file="text.html"/>
+      <record id="1633291023trvsf20n5r" name="Восстановление прошивки на USB в EdgeRouter" author="" url="" tags="Ubiquite, EdgeRouter" ctime="20211003225703" dir="16332910236flvm9gt2z" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="15502323062y748sa8jn" name="WiFi - теория и практика">
