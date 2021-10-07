@@ -1,0 +1,11 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head><meta name="qrichtext" content="1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'DejaVu Sans'; font-size:11pt; font-weight:400; font-style:normal;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Вариант с Network Manager</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">First, find the name of the connection profile in question by looking at the output of <span style=" font-family:'monospace';">nmcli connection</span>. </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Then, modify the profile accordingly, like <span style=" font-family:'monospace';">nmcli connection modify &quot;$PROFILE_NAME&quot; +ipv4.routes &quot;192.268.7.0/24 192.168.7.1&quot;</span> </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Look at the result: <span style=" font-family:'monospace';">nmcli connection show &quot;$PROFILE_NAME&quot;</span>. </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Finally, reactive the profile with <span style=" font-family:'monospace';">nmcli connection up &quot;$PROFILE_NAME&quot;</span>. </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Check the result with <span style=" font-family:'monospace';">ip route show</span> </p>
+<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">You can also use any other NetworkManager client, like the GUI <span style=" font-family:'monospace';">nm-connection</span>editor`. </p></body></html>
