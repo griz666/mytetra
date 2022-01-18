@@ -259,6 +259,7 @@
     <node crypt="" id="1616438201ir46ds8zta" name="Настройка в Docker">
      <recordtable>
       <record id="1616439654sg1hn5w03e" name="Строчки запуска" author="" url="" tags="" ctime="20210322220054" dir="16164396545xwq7cbtrf" file="text.html"/>
+      <record id="1642523178ir427nbhs8" name="Установка Docker" author="" url="https://docs.docker.com/engine/install/debian/" tags="linux, docker, virtual" ctime="20220118192618" dir="1642523178bmuuidthu2" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="164189056498iy30j9g5" name="NodeRed">
