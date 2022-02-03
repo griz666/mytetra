@@ -267,6 +267,11 @@
       <record id="1641890685yeex15o7su" name="API управления потоками" author="" url="https://nodered.org/docs/api/admin/methods/post/flows/" tags="nodered" ctime="20220111114445" dir="1641890685dgabutbt27" file="text.html"/>
      </recordtable>
     </node>
+    <node crypt="" id="1643881428gm2hfjr6fx" name="RTI">
+     <recordtable>
+      <record id="1643881485h3ocsjvcrf" name="CollMasterNET" author="" url="" tags="RTI, CoolMaster" ctime="20220203124445" dir="16438814850cv3ta2kwx" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
   </node>
   <node crypt="1" icon="" id="1542286006yvalbpm627" name="UkM1U0lNUAMjRaJ4u2OLGqKHY0pUE6UnWNXWzy9dTRF4DHnUeSDTlX62HdPnDSjh6D1lJ6k8PY+L82AL9IbAcvmsAV8iaDL58UD8tcq4DZo=">
