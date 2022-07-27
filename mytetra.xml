@@ -59,6 +59,7 @@
       <record id="1580902859y1lp6hkmiz" name="DHCP Classless Route (раздача статических маршрутов)" author="" url="https://habr.com/ru/post/239141/" tags="mikrotik, DHCP, route" ctime="20200205144059" dir="15809028590btc3f8b3i" file="text.html"/>
       <record id="1592937434hx2yke6h29" name="Настраиваем Huawei E3372H в Mikrotik" author="" url="https://www.decker.su/2016/03/huawei-e3372h-mikrotik-951g-2hnd.html" tags="huawei, mikrotik, modem" ctime="20200623213714" dir="1592937434nirmpno3aq" file="text.html"/>
       <record id="1596097116w2w60mw20r" name="Netinstall прошивка" author="" url="https://www.technotrade.com.ua/Articles/mikrotik-netinstall-recovery.php" tags="mikrotik, сети, netinstall" ctime="20200730111836" dir="1596097116ktpxb602dh" file="text.html"/>
+      <record id="1658933154p5b9m278q6" name="Толково про vlan" author="" url="https://mikrotiklab.ru/nastrojka/artga-vlan.html" tags="" ctime="20220727174554" dir="16589331544bzkau3hx6" file="text.html"/>
      </recordtable>
      <node crypt="" id="155074283153srpdwuvz" name="Цикл по настройке 8 статей">
       <recordtable>
