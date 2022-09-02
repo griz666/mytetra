@@ -86,6 +86,11 @@
       <record id="1565642784nz2bwv98gr" name="Юстировка моста" author="" url="https://forum.nag.ru/index.php?/topic/149193-sxt-lite-5-detalnaya-nastroyka/&amp;do=findComment&amp;comment=1545830" tags="WiFi" ctime="20190812234624" dir="15656427844yb6gxbeb4" file="text.html"/>
      </recordtable>
     </node>
+    <node crypt="" id="1662107236biaa4npbal" name="Zyxel">
+     <recordtable>
+      <record id="166210729388fxv9g49z" name="Сброс точек в завод через ssh" author="" url="" tags="zyxel, reset, defaults" ctime="20220902112813" dir="1662107293ls6viaz719" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
    <node crypt="" id="1542267664su4ugevaim" name="Linux">
     <node crypt="" id="1542267664jstogs8u9d" name="Проблемы и решения">
