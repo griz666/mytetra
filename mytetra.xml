@@ -123,7 +123,7 @@
     <node crypt="" id="15425417384ftvvlhoh1" name="Экстплуатация">
      <recordtable>
       <record id="1542541774n0bxddjnq5" name="Простой способ переноса больших файлов по частям " author="" url="https://habr.com/post/43260/" tags="linux, split, file" ctime="20181118144934" dir="15425417741uqu5mfmqd" file="text.html"/>
-      <record id="15500840092kodrw2kek" name="Настройка OpenVPN на Debian/Ubuntu" author="" url="https://webhamster.ru/mytetrashare/index/mtb0/1509879732zr81g23xb1" tags="OpenVPN" ctime="20190213215329" dir="1550084009wzz7uwtpsb" file="text.html"/>
+      <record id="15500840092kodrw2kek" name="Настройка OpenVPN на Debian/Ubuntu [старые версии]" author="" url="https://webhamster.ru/mytetrashare/index/mtb0/1509879732zr81g23xb1" tags="OpenVPN" ctime="20190213215329" dir="1550084009wzz7uwtpsb" file="text.html"/>
       <record id="1550432310ujbh2vwpy1" name="Разрешить/заблокировать Ping" author="" url="https://linux-notes.org/razreshit-zablokirovat-ping-icmp-pakety-v-unix-linux/" tags="linux, firewall, ping" ctime="20190217223830" dir="15504323100ask9u3g12" file="text.html"/>
       <record id="1551023978xvzpvafcao" name="Бекап системы штатными средствами. TAR" author="" url="http://aboutubuntu.ru/backup-and-restore-ubuntu-by-tar-and-gz.html" tags="tar, backup" ctime="20190224185938" dir="1551023978hvrupt40u6" file="text.html"/>
       <record id="155103372183thrpd1h1" name="Веб-интерфейс для кофеварки на Ajenti через HTCPCP" author="" url="https://habr.com/ru/post/215083/" tags="" ctime="20190224214201" dir="1551033721im3b0qeeuq" file="text.html"/>
@@ -139,6 +139,7 @@
       <record id="1583235006ujvkatncth" name="Improve quality of ffmpeg created jpgs" author="" url="https://superuser.com/questions/318845/improve-quality-of-ffmpeg-created-jpgs" tags="ffmpeg, jpeg" ctime="20200303143006" dir="15832350061r8rzp7h82" file="text.html"/>
       <record id="1584688604sqhh1edag1" name="Архивы с кривой кодировкой" author="" url="" tags="" ctime="20200320101644" dir="158468860473p1zdauyo" file="text.html"/>
       <record id="1612714687mcw0o8nt9m" name="копирование файлов rsync" author="" url="" tags="rsync" ctime="20210207191807" dir="1612714687bgutyry5q6" file="text.html"/>
+      <record id="1707933940dnsp94cqa1" name="Настройка easy-rsa для OpenVPN в Docker [latest alpine]" author="" url="https://redos.red-soft.ru/base/server-configuring/other-utilites/openvpn/#o2" tags="openvpn, docker, easy-rsa" ctime="20240214210540" dir="1707933940e1pt5xpatu" file="text.html"/>
      </recordtable>
      <node crypt="" id="16100076068xkh081nrt" name="Виртуализация">
       <recordtable>
