@@ -151,6 +151,7 @@
        <record id="16268907929hw6kz3a5k" name="Настройка сетевого пк" author="" url="" tags="" ctime="20210803220558" dir="162689079288itp8oqrc" file="text.html"/>
       </recordtable>
      </node>
+     <node crypt="" id="172823758981hc5byu0o" name="Docker"/>
     </node>
     <node crypt="" id="1551034204o0zevjis9p" name="Разработка и программинг">
      <recordtable>
@@ -265,7 +266,6 @@
     </node>
     <node crypt="" id="1616438201ir46ds8zta" name="Настройка в Docker">
      <recordtable>
-      <record id="1616439654sg1hn5w03e" name="Строчки запуска" author="" url="" tags="" ctime="20210322220054" dir="16164396545xwq7cbtrf" file="text.html"/>
       <record id="1642523178ir427nbhs8" name="Установка Docker" author="" url="https://docs.docker.com/engine/install/debian/" tags="linux, docker, virtual" ctime="20220118192618" dir="1642523178bmuuidthu2" file="text.html"/>
       <record id="16512514257uca6drfqa" name="Борьба с занятым местом" author="" url="" tags="docker" ctime="20220429195705" dir="1651251425k0dzn6v9a6" file="text.html"/>
      </recordtable>
