@@ -226,6 +226,7 @@
      <record id="1628189730s9niwnw87k" name="&#10;    Производство&#10;&#10;Умный счетчик Меркурий 206. Интегрируем в Node-RED и контролируем качество электрической энергии. " author="" url="https://vladikoms.livejournal.com/147930.html" tags="node-red" ctime="20210805215530" dir="1628189730z8yx65c0cm" file="text.html"/>
      <record id="162820265308xl417cdr" name="как сделать свет фона для текста" author="" url="https://discourse.nodered.org/t/how-to-change-ui-text-background-color/18854/5" tags="" ctime="20210806013053" dir="1628202653cd0ak9ju1f" file="text.html"/>
      <record id="1633626692vvf7xxwp43" name="NodeRed считываение SE PowerLogic" author="" url="https://www.npmjs.com/package/node-red-contrib-schneider-powerlogic" tags="NodeRed, Schneider Electric, SE, Power logic" ctime="20211007201132" dir="1633626692g6db7no1c5" file="text.html"/>
+     <record id="17282384639g5ulyc2vc" name="ESPHome.io проблема со статусом в панели" author="" url="" tags="автоматизация, esphome, docker" ctime="20241006211423" dir="1728238463uawrlnzo7g" file="text.html"/>
     </recordtable>
     <node crypt="" id="16063141323wihityasi" name="Openhub">
      <recordtable>
