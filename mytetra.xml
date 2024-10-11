@@ -169,6 +169,11 @@
       <record id="1633636047xg50d5xldd" name="добавление статического маршрута" author="" url="https://unix.stackexchange.com/questions/558785/add-a-static-route-in-network-manager-if-on-certain-wifi-network" tags="Network Manager, nmcli, linux, сети" ctime="20211007224727" dir="1633636047qwxx3to96g" file="text.html"/>
      </recordtable>
     </node>
+    <node crypt="" id="1728647588dpuds5u6sn" name="NextCloud">
+     <recordtable>
+      <record id="1728647659v7xh0a2b1g" name="Команды сервисного обслуживания" author="" url="" tags="nextcloud" ctime="20241011145419" dir="17286476597kkhxcnsyv" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
    <node crypt="" id="15422771867ffcy2aync" name="Электрика">
     <recordtable>
