@@ -153,7 +153,11 @@
        <record id="16268907929hw6kz3a5k" name="Настройка сетевого пк" author="" url="" tags="" ctime="20210803220558" dir="162689079288itp8oqrc" file="text.html"/>
       </recordtable>
      </node>
-     <node crypt="" id="172823758981hc5byu0o" name="Docker"/>
+     <node crypt="" id="172823758981hc5byu0o" name="Docker">
+      <recordtable>
+       <record id="17289416639ujgsdi895" name="Настройка IPTABLES для автозапуска" author="" url="" tags="iptables, docker" ctime="20241015003423" dir="1728941663zrw2hw1ii6" file="text.html"/>
+      </recordtable>
+     </node>
     </node>
     <node crypt="" id="1551034204o0zevjis9p" name="Разработка и программинг">
      <recordtable>
