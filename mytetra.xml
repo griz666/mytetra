@@ -111,6 +111,7 @@
       <record id="1634478544y1k21pvh9p" name="Сбивается время в Ubuntu и Windows" author="" url="https://losst.ru/sbivaetsya-vremya-v-ubuntu-i-windows#%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_Windows_%D0%B4%D0%BB%D1%8F_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B_%D0%BF%D0%BE_UTC" tags="Linux, Windows, date and time" ctime="20211017164904" dir="1634478544oqhtot2jx0" file="text.html"/>
       <record id="16417384406jixs132a6" name="Работа с русскими именами файлов в ZIP и UNZIP под *nix" author="" url="https://www.opennet.ru/tips/2494_zip_rus_patch.shtml" tags="linux, zip, unzip, codepage" ctime="20220109172720" dir="16417384409k71ea7ve6" file="text.html"/>
       <record id="17284873770tmrz1a11i" name="Резервное копирование" author="" url="" tags="backup, rsync" ctime="20241009182257" dir="17284873774eivxrzjlx" file="text.html"/>
+      <record id="17289388578iixis0fwc" name="Refind установка корня btrfs на subvolume" author="" url="" tags="btrfs, refind, загрузчик" ctime="20241014234737" dir="17289388570qz0h1r3hi" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="15424864394lsj8rldmy" name="Пакеты">
