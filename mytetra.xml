@@ -262,6 +262,11 @@
       <record id="16103681516ghf8c1tok" name="Немного по настройкам ESPEasy" author="" url="https://wiki.sprut.ai/ru/spruthub/accessory/MQTT_ESPEasy" tags="esp8622" ctime="20210111152911" dir="1610368151j4ph57p0v6" file="text.html"/>
       <record id="1641886910kwvaqzr430" name="Разное, ссылки" author="" url="" tags="" ctime="20220111104150" dir="1641886910t167edpoeu" file="text.html"/>
      </recordtable>
+     <node crypt="" id="1732348258031sfuao32" name="esphome">
+      <recordtable>
+       <record id="1732348296ghzzx54oao" name="Подключаем к ESPhome DS18B20" author="" url="https://moyteremok.ru/archives/3745?ysclid=m3t48zku95108312720" tags="dallas, esp8266, esphome" ctime="20241123105136" dir="1732348296qqfwrgxm7m" file="text.html"/>
+      </recordtable>
+     </node>
     </node>
     <node crypt="" id="1609680432xt5p4wwfgi" name="MQTT mosquito">
      <recordtable>
