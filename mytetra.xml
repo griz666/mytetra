@@ -177,6 +177,7 @@
     <node crypt="" id="1728647588dpuds5u6sn" name="NextCloud">
      <recordtable>
       <record id="1728647659v7xh0a2b1g" name="Команды сервисного обслуживания" author="" url="" tags="nextcloud" ctime="20241011145419" dir="17286476597kkhxcnsyv" file="text.html"/>
+      <record id="17377082015zfreunlf9" name="Установка сборки Nextcloud+Cellabora за Nginx Proxy Manager в Docker" author="" url="" tags="nextcloud, collabora, nginx, docker" ctime="20250124114321" dir="1737708201i75sezp68d" file="text.html"/>
      </recordtable>
     </node>
    </node>
