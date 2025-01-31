@@ -294,6 +294,7 @@
      <recordtable>
       <record id="1641890685yeex15o7su" name="API управления потоками" author="" url="https://nodered.org/docs/api/admin/methods/post/flows/" tags="nodered" ctime="20220111114445" dir="1641890685dgabutbt27" file="text.html"/>
       <record id="1657142890gv6kd1i08v" name="Защита и ограничение доступа" author="" url="" tags="nodered, access" ctime="20220707002810" dir="16571428905gouao8zs5" file="text.html"/>
+      <record id="1738342217iu6f0tcb5t" name="Подключение Алисы (яндекс) к NodeRed" author="" url="" tags="яндекс, yandex, алиса, alice, nodered, автоматизация" ctime="20250131195017" dir="1738342217awq93mrudo" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1643881428gm2hfjr6fx" name="RTI">
